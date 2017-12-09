@@ -1,0 +1,8 @@
+{
+  "name": "gotta-go-react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mford008/gotta-go-react.git",
+  "author": "Maddy Ford <mrhf008@gmail.com>",
+  "license": "MIT"
+}
