@@ -23,6 +23,16 @@ const restroomSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.Now
+  },
+  rating: {
+    type: Number
+  },
+  verified: {
+    type: Boolean,
+    default: false
+  },
+  hours: {
+    type: String
   }
 });
 
