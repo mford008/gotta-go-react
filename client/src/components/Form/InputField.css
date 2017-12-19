@@ -1,0 +1,18 @@
+.columns {
+  margin: 0;
+}
+
+.column {
+  padding: 0;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+label.label {
+  color: #393f60;
+  font-family: 'Raleway', sans-serif;
+}
+
+.input {
+  margin-bottom: 10px;
+}
