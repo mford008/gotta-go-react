@@ -14,6 +14,15 @@ class App extends Component {
 
   render () {
     return (
+      //Where our router will need to go
+      // <main>
+      //   <Switch>
+      //     <Route exact path='/' component={Home}/>
+      //     <Route path='/list' component={List}/>
+      //     <Route path='/map' component={Map}/>
+      //     <Route path='/Account' component={Account}/>
+      //   </Switch>
+      // </main>
       <div>
         <div className='form-group'>
           <input className='form-control'
