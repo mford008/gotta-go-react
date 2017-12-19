@@ -7,13 +7,6 @@ import { Link } from 'react-router-dom';
 import './Start.css';
 
 class Start extends Component {
-  // switchPage = () => {
-  //   <Router>
-  //     <Switch>
-  //       <Route exact path='/login' component={Login} />
-  //     </Switch>
-  //   </Router>;
-  // }
 
   render () {
     return (
