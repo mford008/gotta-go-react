@@ -1,0 +1,14 @@
+div img.start-logo {
+  margin: 50px;
+  height: 120px;
+  width: auto;
+}
+
+.intro {
+  margin: 20px;
+  padding: 20px;
+}
+
+p strong {
+  color: #f9fafb;
+}
