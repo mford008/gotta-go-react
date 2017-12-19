@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import Nav from './Nav';
 
-const Header = () =>
+export const Header = () =>
 <nav className="navbar is-info" role="navigation" aria-label="main navigation">
   <div className="navbar-brand is-centered">
     <a className="navbar-item" href="/landing_map">
@@ -17,4 +17,4 @@ const Header = () =>
   <Nav />
 </nav>;
 
-export default Header;
+// export default Header;
