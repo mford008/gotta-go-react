@@ -1,40 +1,45 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Start from './pages/Start/Start.js';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-class App extends Component {
-  state = {
-    string: ''
-  }
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  render () {
-    return (
-      //Where our router will need to go
-      // <main>
-      //   <Switch>
-      //     <Route exact path='/' component={Home}/>
-      //     <Route path='/list' component={List}/>
-      //     <Route path='/map' component={Map}/>
-      //     <Route path='/Account' component={Account}/>
-      //   </Switch>
-      // </main>
+// class App extends Component {
+//   state = {
+//     string: ''
+//   }
+//
+//   handleInputChange = event => {
+//     const { name, value } = event.target;
+//     this.setState({
+//       [name]: value
+//     });
+//   };
+//
+//   render () {
+//     return (
+//       <div>
+//         <div className='form-group'>
+//           <input className='form-control'
+//           onChange={this.handleInputChange}
+//           name="string"
+//           />
+//           <p>{this.state.string}</p>
+//           <button>Click me</button>
+//         </div>
+//         <br />
+//         <p> start component here </p>
+//         <br />
+//         <Start />
+//       </div>
+//     );
+//   }
+// }
       <div>
-        <div className='form-group'>
-          <input className='form-control'
-          onChange={this.handleInputChange}
-          name="string"
-          />
-          <p>{this.state.string}</p>
-          <button>Click me</button>
-        </div>
+        <Switch>
+          <Route exact path='/' component={Start} />
+        </Switch>
       </div>
-    );
-  }
-}
+    </Router>
+  );
+};
 
 export default App;

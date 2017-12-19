@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const restroomSchema = new Schema({
+const RestroomSchema = new Schema({
   name: {
     type: String,
     trim: true,
@@ -18,7 +18,7 @@ const restroomSchema = new Schema({
   },
   comments: [{
     type: Schema.Types.ObjectId,
-    ref: "Comment"
+    ref: 'Comment'
   }],
   createdAt: {
     type: Date,
