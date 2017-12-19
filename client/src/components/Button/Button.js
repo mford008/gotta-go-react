@@ -1,11 +1,13 @@
 import React from 'react';
 import './Button.css';
 
-const Button = props =>
-  <div class="columns">
-      <div class="column has-text-centered">
-        <button class="button">{props}</button>
+export const Btn = props =>
+  <div>
+    <div className='columns'>
+      <div className='column has-text-centered'>
+        <button className='button'>{props.children}</button>
       </div>
+    </div>
   </div>;
 
-export default Button;
+// export default Button;
