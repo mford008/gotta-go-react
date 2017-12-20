@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Btn } from '../../components/Button/Button.js';
 import { InputField } from '../../components/Form/InputField.js';
 // import { Link } from 'react-router-dom';
-import './Login.css';
+// import './Login.css';
 
 class Login extends Component {
   render() {

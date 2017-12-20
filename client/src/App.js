@@ -38,16 +38,17 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // }
 
 const App = () => {
+  /*
+  <Route exact path='/signup' component={Signup} />
+  <Route exact path='/landing' component={Landing} />
+  */
+
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route exact path='/' component={Start} />
-          <Route exact path='/login' component={Login} />
-          <Route exact path='/signup' component={Signup} />
-          <Route exact path='/landing' component={Landing} />
-        </Switch>
-      </div>
+      <Switch>
+        <Route exact path='/' component={Start} />
+        <Route exact path='/login' component={Login} />
+      </Switch>
     </Router>
   );
 };
