@@ -1,7 +1,4 @@
 import React from 'react';
-import Signup from './pages/Signup/Signup.js';
-import Login from './pages/Login/Login.js';
-import Landing from './pages/Landing/Landing.js';
 import Start from './pages/Start/Start.js';
 import Login from './pages/Login/Login.js';
 import Signup from './pages/Signup/Signup.js';
