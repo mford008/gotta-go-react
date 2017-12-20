@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 import { Btn } from '../../components/Button/Button.js';
 // import API from '../../utils/API';
 import { Link } from 'react-router-dom';
-import './Start.css';
 
 class Start extends Component {
 
