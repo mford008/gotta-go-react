@@ -5,35 +5,35 @@ import { InputField } from '../../components/Form/InputField.js';
 import './Login.css';
 
 class Login extends Component {
-  render() {
+  render () {
     return (
-      <div className="content">
-        <div className="columns">
-          <div className="column has-text-centered title">
+      <div className='content'>
+        <div className='columns'>
+          <div className='column has-text-centered title'>
             <div>
-              <h1>WELCOME BACK!</h1>
+              <h2>WELCOME BACK!</h2>
             </div>
           </div>
         </div>
         <InputField
-          type="text"
-          label="Username"
-          name="username"
-          placeholder="enter username"
+          type='text'
+          label='Username'
+          name='username'
+          placeholder='enter username'
         />
         <InputField
-          type="password"
-          label="Password"
-          name="password"
-          placeholder="enter password"
+          type='password'
+          label='Password'
+          name='password'
+          placeholder='enter password'
         />
         <Btn
-          onClick={this.handleForSubmit}
+          onClick={this.handleFormSubmit}
         >
           Log in
         </Btn>
       </div>
-    )
+    );
   }
 }
 
