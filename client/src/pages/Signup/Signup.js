@@ -1,41 +1,19 @@
 import React, { Component } from 'react';
-import { Btn } from '../../components/Button/Button.js';
-import { InputField } from '../../components/Form/InputField.js';
-// import { Link } from 'react-router-dom';
+import { Btn, UserName, Password } from '../../components/Form';
+import { Title } from '../../components/Title/Title.js';
 
 class Signup extends Component {
   render () {
     return (
       <div className='content'>
-        <div className='columns'>
-          <div className='column has-text-centered title'>
-            <div>
-              <h2>WELCOME!</h2>
-            </div>
-          </div>
-        </div>
-        <InputField
-          type='text'
-          label='Username'
-          name='username'
-          placeholder='enter username'
-        />
-        <InputField
-          type='password'
-          label='Password'
-          name='password'
-          placeholder='enter password'
-        />
-        <InputField
-          type='password'
-          label='Password'
-          name='password'
-          placeholder='confirm password'
-        />
+        <Title>WELCOME!</Title>
+        <UserName/>
+        <Password/>
+        <Password/>
         <Btn
           onClick={this.handleFormSubmit}
         >
-          Log in
+          Sign up
         </Btn>
       </div>
     );

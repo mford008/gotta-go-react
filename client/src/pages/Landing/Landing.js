@@ -1,36 +1,30 @@
 import React, { Component } from 'react';
-import { Btn } from '../../components/Button/Button.js';
-import { InputField } from '../../components/Form/InputField.js';
+import "../Login/Login.css";
+import { Header, Plus, NavLogo, NavMenu } from '../../components/Header';
+import { TabGroup, SingleTab } from '../../components/TabGroup';
+
 // import { Link } from 'react-router-dom';
 
 class Landing extends Component {
   render () {
     return (
-      <div className='content'>
-        <div className='columns'>
-          <div className='column has-text-centered title'>
-            <div>
-              <h1>WELCOME BACK!</h1>
-            </div>
-          </div>
+      <div>
+        <Header>
+          <Plus/>
+          <NavLogo/>
+          <NavMenu/>
+        </Header>
+        <TabGroup>
+          <SingleTab className={'fa-fa-map'}>
+            Map
+          </SingleTab>
+          <SingleTab className='fa-fa-list'>
+            List
+          </SingleTab>
+        </TabGroup>
+        <div>
+          <h3>Hello teamawesome!</h3>
         </div>
-        <InputField
-          type='text'
-          label='Username'
-          name='username'
-          placeholder='enter username'
-        />
-        <InputField
-          type='password'
-          label='Password'
-          name='password'
-          placeholder='enter password'
-        />
-        <Btn
-          onClick={this.handleFormSubmit}
-        >
-          Log in
-        </Btn>
       </div>
     );
   }
