@@ -7,9 +7,9 @@ class Start extends Component {
 
   render () {
     return (
-      <div>
+      <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
         <div className='has-text-centered logo'>
-          <img className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
+          <img style={{ margin: '50px', height: '120px', width: 'auto' }} className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
         </div>
 
         <div className='intro has-text-centered'>
@@ -17,17 +17,17 @@ class Start extends Component {
           <p> Or just use it for searching without registration.</p>
         </div>
 
-        <Btn >
+        <Btn style={{ backgroundColor: '#f78255' }} >
           <Link to={'/login'}>
             Log in
           </Link>
         </Btn>
-        <Btn >
+        <Btn style={{ backgroundColor: '#f78255' }} >
           <Link to={'/signup'}>
             Sign up
           </Link>
         </Btn>
-        <Btn>
+        <Btn style={{ backgroundColor: '#f78255' }} >
           <Link to={'/landing'}>
             Just use it
           </Link>

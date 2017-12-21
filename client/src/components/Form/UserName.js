@@ -5,6 +5,6 @@ export const UserName = props =>
 <Field>
   <Label>Username</Label>
   <Control>
-      <Input type="text" placeholder='Enter username' />
+      <Input {...props}></Input>
   </Control>
 </Field>;
