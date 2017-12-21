@@ -5,12 +5,6 @@ html, body {
   padding: 0;
 }
 
-div img {
-  margin: 50px;
-  height: 120px;
-  width: auto;
-}
-
 .intro {
   margin: 20px;
 }
@@ -26,8 +20,9 @@ button a {
 button.button {
   font-family: 'Raleway', sans-serif;
   background-color: #f78255;
-  width: 150px;
-  font-weight: 700;
+  width: 180px;
+  margin-bottom: 5px;
+  /* font-weight: 300; */
   /* border: none; */
 }
 
