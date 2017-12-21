@@ -5,6 +5,6 @@ export const Password = props =>
 <Field>
   <Label>Password</Label>
   <Control>
-      <Input type="text" placeholder='Enter password' />
+      <Input {...props} />
   </Control>
 </Field>;

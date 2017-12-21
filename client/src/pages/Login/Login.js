@@ -6,13 +6,13 @@ import './Login.css';
 class Login extends Component {
   render () {
     return (
-      <div className='content'>
+      <div style={{ backgroundColor: '#f9fafb' }} className='content'>
         <Title>WELCOME BACK!</Title>
         <form name='form2'>
           <div className="columns">
             <div className="column">
-              <UserName />
-              <Password/>
+              <UserName type='text' placeholder='Enter username'/>
+              <Password type='password' placeholder='Enter password'/>
               <Btn
                 onClick={this.handleFormSubmit}
               >
