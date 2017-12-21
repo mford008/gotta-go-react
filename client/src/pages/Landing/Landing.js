@@ -1,19 +1,13 @@
 import React, { Component } from 'react';
 import "../Login/Login.css";
-import { Header, Plus, NavLogo, NavMenu } from '../../components/Header';
+import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
-
-// import { Link } from 'react-router-dom';
 
 class Landing extends Component {
   render () {
     return (
       <div>
-        <Header>
-          <Plus/>
-          <NavLogo/>
-          <NavMenu/>
-        </Header>
+        <Header/>
         <TabGroup>
           <SingleTab className={'fa-fa-map'}>
             Map
