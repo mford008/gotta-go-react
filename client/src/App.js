@@ -5,42 +5,16 @@ import Signup from './pages/Signup/Signup.js';
 import Landing from './pages/Landing/Landing.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-// class App extends Component {
-//   state = {
-//     string: ''
-//   }
-//
-//   handleInputChange = event => {
-//     const { name, value } = event.target;
-//     this.setState({
-//       [name]: value
-//     });
-//   };
-//
-//   render () {
-//     return (
-//       <div>
-//         <div className='form-group'>
-//           <input className='form-control'
-//           onChange={this.handleInputChange}
-//           name="string"
-//           />
-//           <p>{this.state.string}</p>
-//           <button>Click me</button>
-//         </div>
-//         <br />
-//         <p> start component here </p>
-//         <br />
-//         <Start />
-//       </div>
-//     );
-//   }
-// }
-
 const App = () => {
+  const style = {
+    width: '100%',
+    height: '100%',
+    backgroundColor: '#cccccc',
+  }
+
   return (
     <Router>
-      <div>
+      <div style={style}>
         <Switch>
           <Route exact path='/' component={Start} />
           <Route exact path='/login' component={Login} />

@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-// pagesimport React from 'react';
-// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Btn } from '../../components/Button/Button.js';
-// import API from '../../utils/API';
+import { Btn } from '../../components/Form';
 import { Link } from 'react-router-dom';
 import './Start.css';
 
@@ -10,8 +7,8 @@ class Start extends Component {
 
   render () {
     return (
-      <div className='has-text-centered'>
-        <div className='has-text-centered'>
+      <div>
+        <div className='has-text-centered logo'>
           <img className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
         </div>
 
@@ -27,7 +24,7 @@ class Start extends Component {
         </Btn>
         <Btn >
           <Link to={'/signup'}>
-            Sign in
+            Sign up
           </Link>
         </Btn>
         <Btn>
@@ -35,7 +32,6 @@ class Start extends Component {
             Just use it
           </Link>
         </Btn>
-
       </div>
     );
   }
