@@ -1,10 +1,11 @@
 import React from 'react';
 import { Field, Label, Control, TextArea } from 'bloomer';
 
-export const Comment = props =>
+export const Comment = () => (
   <Field>
-    <Label>Comment</Label>
+    <Label>Comment (optional)</Label>
     <Control>
-      <TextArea placeholder={'TextArea'} />
+      <TextArea placeholder={'Leave comment here'} />
     </Control>
-  </Field>;
+  </Field>
+);

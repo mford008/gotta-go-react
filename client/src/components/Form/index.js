@@ -1,3 +1,5 @@
 export * from './Button';
-export * from './UserName';
-export * from './Password';
+export * from './InputField';
+export * from './Comment';
+export * from './Category';
+export * from './Form';
