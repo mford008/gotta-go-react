@@ -3,7 +3,7 @@ import { NavbarItem, Icon } from 'bloomer';
 
 export const Plus = () =>
   <NavbarItem isHidden='mobile'>
-    <a>
+    <a href='/addloo'>
       <Icon>
           <span className="fa fa-plus-circle fa-inverse fa-2x"/>
       </Icon>
