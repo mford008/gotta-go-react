@@ -10,12 +10,12 @@ class AddLoo extends Component {
         <Header />
         <Title>ADD A RESTROOM</Title>
         <Form>
-            <InputField type='text' placeholder='e.g. park, cafe' label='Location name'/>
-            <InputField type='text' placeholder='Enter address' label='Address'/>
-            <Category />
-            <Comment />
-            <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
-          </Form>
+          <InputField type='text' placeholder='e.g. park, cafe' label='Location name' />
+          <InputField type='text' placeholder='Enter address' label='Address' />
+          <Category />
+          <Comment />
+          <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
+        </Form>
       </div>
     );
   }
