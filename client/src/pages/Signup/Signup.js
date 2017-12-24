@@ -10,11 +10,11 @@ class Signup extends Component {
         <Header />
         <Title>WELCOME!</Title>
         <Form>
-            <InputField type='text' placeholder='Enter username' label='Username'/>
-            <InputField type='password' placeholder='Enter password' label='Password'/>
-            <InputField type='password' placeholder='Enter password' label='Confirm password'/>
-            <Btn
-              onClick={this.handleFormSubmit}
+          <InputField type='text' placeholder='Enter username' label='Username' />
+          <InputField type='password' placeholder='Enter password' label='Password' />
+          <InputField type='password' placeholder='Enter password' label='Confirm password' />
+          <Btn
+            onClick={this.handleFormSubmit}
             >
               Sign up
             </Btn>

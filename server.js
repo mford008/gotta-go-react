@@ -15,7 +15,6 @@ if (process.env.NODE_ENV === 'production') { // should this development?
   app.use(express.static('client/build'));
 }
 
-
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
