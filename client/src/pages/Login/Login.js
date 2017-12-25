@@ -11,8 +11,8 @@ class Login extends Component {
         <Header />
         <Title>WELCOME BACK!</Title>
         <Form>
-          <InputField type='text' placeholder='Enter username' label='Username'/>
-          <InputField type='password' placeholder='Enter password' label='Password'/>
+          <InputField type='text' placeholder='Enter username' label='Username' />
+          <InputField type='password' placeholder='Enter password' label='Password' />
           <Btn
             onClick={this.handleFormSubmit}
           >
