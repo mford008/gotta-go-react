@@ -15,7 +15,7 @@ class AddLoo extends Component {
             <Category />
             <Comment />
             <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
-          </Form>
+        </Form>
       </div>
     );
   }
