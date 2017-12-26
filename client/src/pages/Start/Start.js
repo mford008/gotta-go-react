@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import './Start.css';
 
 class Start extends Component {
-
   render () {
     return (
       <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>

@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 // const path = require("path");
-// const routes = require('./routes');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,9 +11,14 @@ const PORT = process.env.PORT || 3001;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 // Serve up static assets
-if (process.env.NODE_ENV === 'production') { // should this development?
+if (process.env.NODE_ENV === 'production') {
+  // should this development?
+  // no, this is in an if statement, saything that if the environment is 'production'
+  // then use the 'build' version of the app, not the development version.
   app.use(express.static('client/build'));
 }
+
+app.use(routes);
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;

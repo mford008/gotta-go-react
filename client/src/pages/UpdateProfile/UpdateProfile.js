@@ -10,11 +10,11 @@ class UpdateProfile extends Component {
         <Header />
         <Title>ACCOUNT INFO</Title>
         <Form>
-            <InputField type='text' placeholder='Enter username' label='Username'/>
-            <InputField type='password' placeholder='Enter password' label='Current password'/>
-            <InputField type='password' placeholder='Enter password' label='New password'/>
-            <InputField type='password' placeholder='Confirm password' label='Re-type new password'/>
-            <Btn onClick={this.handleFormSubmit} > Update </Btn>
+          <InputField type='text' placeholder='Enter username' label='Username' />
+          <InputField type='password' placeholder='Enter password' label='Current password' />
+          <InputField type='password' placeholder='Enter password' label='New password' />
+          <InputField type='password' placeholder='Confirm password' label='Re-type new password' />
+          <Btn onClick={this.handleFormSubmit} > Update </Btn>
         </Form>
       </div>
     );
