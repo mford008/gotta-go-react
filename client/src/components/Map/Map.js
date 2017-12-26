@@ -18,9 +18,8 @@ const Map = () => {
 
   return (
     <iframe
-src="https://www.google.com/maps/embed/v1/place?q=Uluru&key=AIzaSyAO6DPj2O5ahIC8Pr36AL6nQDUH0APPmyM" allowfullscreen></iframe>
-  )
-}
-
+      src='https://www.google.com/maps/embed/v1/place?q=Uluru&key=AIzaSyAO6DPj2O5ahIC8Pr36AL6nQDUH0APPmyM' allowfullscreen />
+  );
+};
 
 export default Map;

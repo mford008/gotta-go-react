@@ -5,7 +5,7 @@ export const InputField = ({ label, ...props }) => (
   <Field>
     <Label>{label}</Label>
     <Control>
-        <Input {...props}></Input>
+      <Input {...props} />
     </Control>
   </Field>
 );
