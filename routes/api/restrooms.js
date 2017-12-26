@@ -1,13 +1,9 @@
-const router = require("express").Router();
-const booksController = require("../../controllers/booksController");
+const router = require('express').Router();
+const restroomController = require('../../controllers/restroomController');
 
-// Matches with "/api/books"
-// Needs
-router.route("/")
-  .get(booksController.findAll)
-  .post(booksController.create);
-
-
-
+// Matches with '/api/restrooms'
+router.route('/')
+  .get(restroomController.findAll)
+  .post(restroomController.create);
 
 module.exports = router;

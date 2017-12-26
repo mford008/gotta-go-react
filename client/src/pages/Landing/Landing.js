@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../Login/Login.css";
+import '../Login/Login.css';
 import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -7,7 +7,7 @@ class Landing extends Component {
   render () {
     return (
       <div>
-        <Header/>
+        <Header />
         <TabGroup>
           <SingleTab className={'fa-fa-map'}>
             Map
