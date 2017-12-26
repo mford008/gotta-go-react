@@ -2,9 +2,9 @@ import React from 'react';
 import { NavbarItem, NavbarLink, NavbarDropdown } from 'bloomer';
 
 export const NavMenu = props =>
-  <NavbarItem hasDropdown isHoverable isHidden='mobile'>
-    <NavbarLink style={{ color: '#ffffff', fontWeight: '700' }} href=''>Menu</NavbarLink>
-    <NavbarDropdown>
+  <NavbarItem hasDropdown isHoverable isHidden='mobile' style={{ background: '#39405f' }}>
+    <NavbarLink style={{ background: '#39405f', color: '#ffffff', fontWeight: '700' }} href=''>Menu</NavbarLink>
+    <NavbarDropdown style={{ background: '#39405f' }}>
       {props.children}
     </NavbarDropdown>
   </NavbarItem>;

@@ -7,7 +7,7 @@ export const Header = () =>
     <Plus />
     <NavLogo />
     <NavMenu>
-      <MenuItem href='/landing'>Whats Nearby</MenuItem>
+      <MenuItem href='/landing'>Nearby</MenuItem>
       <MenuItem href='/account'>Account</MenuItem>
       <MenuItem href='/login'>Log in</MenuItem>
     </NavMenu>
