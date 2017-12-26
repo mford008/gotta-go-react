@@ -37,8 +37,9 @@ class Landing extends Component {
             <ListItem key={restroom._id}>
               <a href={'/restroom/' + restroom._id}></a>
               <h1><strong>{restroom.name}</strong></h1>
-              <h2>{restroom.location}</h2>
-              <h2>{restroom.rating}</h2>
+              <h2>{restroom.location} - {restroom.category}</h2>
+              <h3>Hours: {restroom.hours}</h3>
+              <h3>Rating: {restroom.rating}</h3>
             </ListItem>
           ))}
           </ListContainer>
