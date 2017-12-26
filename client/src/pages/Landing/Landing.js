@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
+import { ListContainer, ListItem } from "../../components/List";
 import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -30,15 +31,17 @@ class Landing extends Component {
             List
           </SingleTab>
         </TabGroup>
-        <div>
-          <h3>Hello teamawesome!</h3>
-        </div>
         <br />
-        <div>
+        <ListContainer>
           {this.state.restroomList.map(restroom => (
-            <h3 key={restroom._id}>{restroom.name}</h3>
+            <ListItem key={restroom._id}>
+              <a href={'/restroom/' + restroom._id}></a>
+              <h1><strong>{restroom.name}</strong></h1>
+              <h2>{restroom.location}</h2>
+              <h2>{restroom.rating}</h2>
+            </ListItem>
           ))}
-        </div>
+          </ListContainer>
       </div>
     );
   }
