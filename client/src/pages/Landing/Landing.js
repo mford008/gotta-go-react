@@ -24,19 +24,18 @@ class Landing extends Component {
       <div>
         <Header />
         <TabGroup>
-          <SingleTab className={'fa-fa-map'}>
+          <SingleTab className='fa-fa-map'>
             Map
           </SingleTab>
           <SingleTab className='fa-fa-list'>
             List
           </SingleTab>
         </TabGroup>
-        <br />
         <ListContainer>
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
               <a href={'/restroom/' + restroom._id}></a>
-              <h1><strong>{restroom.name}</strong></h1>
+              <h2><strong>{restroom.name}</strong></h2>
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
