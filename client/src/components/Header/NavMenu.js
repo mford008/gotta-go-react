@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavbarItem, NavbarLink, NavbarDropdown } from 'bloomer';
 
+
 class NavMenu extends Component {
 
   state = {
