@@ -1,4 +1,4 @@
 module.exports = {
-  Restroom: require('./Restroom.js'),
+  Restroom: require('./restroom.js'),
   Comment: require('./Comment.js')
 };
