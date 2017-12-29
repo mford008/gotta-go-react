@@ -34,14 +34,11 @@ class Landing extends Component {
         <ListContainer>
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
-<<<<<<< HEAD
               <a href={'/restroom/' + restroom._id}></a>
               <h2><strong>{restroom.name}</strong></h2>
-=======
 
               <h1><strong>{restroom.name}</strong></h1>
 
->>>>>>> e4e276c55aeeae538da8e750249722d0bc702eb1
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
