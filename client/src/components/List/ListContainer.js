@@ -8,4 +8,4 @@ export const ListContainer = ({ children }) => {
       </ul>
     </div>
   );
-}
+};
