@@ -56,11 +56,44 @@ const restroomSeed = [
   }
 ];
 
+const commentSeed = [
+  {
+    body: 'Good food',
+    created: {
+      type: Date.now
+    }
+  },
+  {
+    body: 'good gas prices',
+    created: {
+      type: Date.now
+    }
+  },
+  {
+    body: 'Super quiet',
+    created: {
+      type: Date.now
+    }
+  }
+];
+
 db.Restroom
   .remove({})
   .then(() => db.Restroom.collection.insertMany(restroomSeed))
   .then(data => {
     console.log(data.insertedIds.length + ' records inserted');
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+db.Comment
+  .remove({})
+  .then(() => db.Comment.collection.insertMany(commentSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + ' comments inserted');
     process.exit(0);
   })
   .catch(err => {
