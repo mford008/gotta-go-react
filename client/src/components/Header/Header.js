@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar } from 'bloomer';
-import { Plus, NavLogo, NavMenu, MenuItem } from '../../components/Header';
+import { Plus, NavLogo, MenuItem } from '../../components/Header';
+import NavMenu from './NavMenu';
 
 export const Header = () =>
   <Navbar style={{backgroundColor: '#393f60', justifyContent: 'space-between'}}>
