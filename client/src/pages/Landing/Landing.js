@@ -21,6 +21,7 @@ class Landing extends Component {
 
     API.loadComments()
     .then(res => this.setState({ commentList: res.data }))
+    .then(console.log('comment test'))
     .catch(err => console.log(err));
   }
 
@@ -45,12 +46,17 @@ class Landing extends Component {
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-              {this.state.commentList.map(comment => (
-                <CommentContainer>Comments: {comment.body}</CommentContainer>
+
+              <CommentContainer>
+                {this.state.commentList.map(comment => (
+                <h1>Comments: {comment.body}</h1>
               ))}
+              </CommentContainer>
+
             </ListItem>
           ))}
           </ListContainer>
+          
       </div>
     );
   }
