@@ -16,7 +16,7 @@ const RestroomSchema = new Schema({
   category: {
     type: String
   },
-  comments: [{
+  comment: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'
   }],
