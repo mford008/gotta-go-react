@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { ListContainer, ListItem, CommentContainer } from "../../components/List";
+import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
 import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -21,6 +21,7 @@ class Landing extends Component {
 
     API.loadComments()
     .then(res => this.setState({ commentList: res.data }))
+    .then(console.log('comment test'))
     .catch(err => console.log(err));
   }
 
@@ -45,12 +46,18 @@ class Landing extends Component {
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-              {this.state.commentList.map(comment => (
-                <CommentContainer>Comments: {comment.body}</CommentContainer>
-              ))}
+
             </ListItem>
           ))}
+
           </ListContainer>
+          <CommentContainer>
+            {this.state.commentList.map(comment => (
+            <CommentItem>
+            <h1>Comments: {comment.body}</h1>
+            </CommentItem>
+          ))}
+          </CommentContainer>
       </div>
     );
   }
