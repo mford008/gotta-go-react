@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const CommentContainer = props =>
+export const CommentContainer = ({ children }) =>
   <div>
-    <p className="list-comment-item" style={{ color: '#393f60' }}>
-      {props.children}
-    </p>
+    <ul className="list-comment-item" style={{ color: '#393f60' }}>
+      { children }
+    </ul>
   </div>;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { ListContainer, ListItem, CommentContainer } from "../../components/List";
+import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
 import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -47,16 +47,17 @@ class Landing extends Component {
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
 
-              <CommentContainer>
-                {this.state.commentList.map(comment => (
-                <h1>Comments: {comment.body}</h1>
-              ))}
-              </CommentContainer>
-
             </ListItem>
           ))}
+
           </ListContainer>
-          
+          <CommentContainer>
+            {this.state.commentList.map(comment => (
+            <CommentItem>
+            <h1>Comments: {comment.body}</h1>
+            </CommentItem>
+          ))}
+          </CommentContainer>
       </div>
     );
   }
