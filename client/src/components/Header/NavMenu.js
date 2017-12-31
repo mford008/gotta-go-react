@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { NavbarItem, NavbarLink, NavbarDropdown } from 'bloomer';
+import { NavbarItem, NavbarLink, NavbarDropdown, NavbarBurger } from 'bloomer';
 
 class NavMenu extends Component {
 
-  state = {
-    isActive: ""
-  };
+  // state = {
+  //   isActive: ""
+  // };
 
   render(props) {
     return (
-      <NavbarItem hasDropdown isHoverable isHidden='mobile'>
+      <div>
+        <NavbarBurger />
+        <NavbarItem hasDropdown isHoverable isHidden='mobile'>
         <NavbarLink style={{ background: '#39405f', color: '#ffffff', fontWeight: '700' }}
           href=''>Menu
         </NavbarLink>
@@ -17,6 +19,7 @@ class NavMenu extends Component {
           {props}
         </NavbarDropdown>
       </NavbarItem>
+      </div>
     );
   }
 };

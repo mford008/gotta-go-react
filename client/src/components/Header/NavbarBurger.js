@@ -4,9 +4,16 @@ class NavbarBurger extends Component {
   state = {
     isActive:
   }
+
+  onClick = event => {
+    this.setState({
+      isActive: true
+    });
+  };
+
   render () {
     return (
-      <NavbarBurger>
+      <NavbarBurger onClick={this.onClick}>
         {( children )}
       </NavbarBurger>
     );

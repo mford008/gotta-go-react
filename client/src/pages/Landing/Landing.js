@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { ListContainer, ListItem } from "../../components/List";
+import { ListContainer, ListItem, CommentContainer } from "../../components/List";
 import { Header } from '../../components/Header';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -10,12 +10,17 @@ class Landing extends Component {
     // since the mongoose call returns an array of all the restrooms in the DB,
     // we can store them in an array and use the .map function to get info from
     // every item in the respone (res.data)
-    restroomList: []
+    restroomList: [],
+    commentList: []
   }
 
   componentDidMount () {
     API.loadRestrooms()
     .then(res => this.setState({ restroomList: res.data }))
+    .catch(err => console.log(err));
+
+    API.loadComments()
+    .then(res => this.setState({ commentList: res.data }))
     .catch(err => console.log(err));
   }
 
@@ -34,12 +39,15 @@ class Landing extends Component {
         <ListContainer>
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
-
+              <a href={'/restroom/' + restroom._id}></a>
               <h1><strong>{restroom.name}</strong></h1>
 
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
+              {this.state.commentList.map(comment => (
+                <CommentContainer>Comments: {comment.body}</CommentContainer>
+              ))}
             </ListItem>
           ))}
           </ListContainer>
