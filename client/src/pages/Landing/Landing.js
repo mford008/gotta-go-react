@@ -43,22 +43,15 @@ class Landing extends Component {
             <ListItem key={restroom._id}>
               <a href={'/restroom/' + restroom._id}>
               <h1><strong>{restroom.name}</strong></h1></a>
-
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-              <CommentContainer>
-              {restroom.comments.map(comments => {
-                return (
-                  <CommentItem>comments.{ref}</CommentItem>
-                   )
-                 })
-               }
-              </CommentContainer>
+              <h4>{restroom.comments.map(comments =>
+                (comments.ref)
+              )}</h4>
             </ListItem>
           ))}
-
-          </ListContainer>
+        </ListContainer>
 
       </div>
     );
