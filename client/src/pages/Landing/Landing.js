@@ -16,8 +16,8 @@ class Landing extends Component {
 
   componentDidMount () {
     API.loadRestrooms()
-    .then(res => console.log(res.data))
-    // .then(res => this.setState({ restroomList: res.data }))
+    // .then(res => console.log(res.data))
+    .then(res => this.setState({ restroomList: res.data }))
     .catch(err => console.log(err))
 
     // API.loadComments()
@@ -47,8 +47,14 @@ class Landing extends Component {
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-              <p>{restroom.comments.ref}</p>
-
+              <CommentContainer>
+              {restroom.comments.map(comments => {
+                return (
+                  <CommentItem>comments.{ref}</CommentItem>
+                   )
+                 })
+               }
+              </CommentContainer>
             </ListItem>
           ))}
 

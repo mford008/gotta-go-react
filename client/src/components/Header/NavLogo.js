@@ -6,5 +6,5 @@ export const NavLogo = () =>
     <NavbarItem>
       <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
     </NavbarItem>
-    <NavbarBurger style={{ color: '#ffffff' }} />
+    // <NavbarBurger style={{ color: '#ffffff' }} />
   </NavbarBrand>;
