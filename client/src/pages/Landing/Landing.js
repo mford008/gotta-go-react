@@ -46,9 +46,9 @@ class Landing extends Component {
               <h2>{restroom.location} - {restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-                {restroom.comments.map(comments =>
-                  (comments.ref)
-                )}
+              <h4>{restroom.comments.map(comments =>
+                (comments.ref)
+              )}</h4>
             </ListItem>
           ))}
         </ListContainer>
