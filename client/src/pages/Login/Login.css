@@ -104,5 +104,8 @@ nav.navbar.is-info {
 label.label {
   color: #393f60;
   font-family: 'Raleway', sans-serif;
+}
 
+div ul li.list-group-item.tile {
+  padding: 0 10px 10px 10px;
 }
