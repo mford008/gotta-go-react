@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavbarBrand, NavbarItem, NavbarBurger } from 'bloomer';
 
-export const NavLogo = () =>
+export const NavbarLogo = () =>
   <NavbarBrand>
     <NavbarItem>
       <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
     </NavbarItem>
-    // <NavbarBurger style={{ color: '#ffffff' }} />
+    <NavbarBurger onClick={this.onClick} style={{ color: '#ffffff' }} />
   </NavbarBrand>;

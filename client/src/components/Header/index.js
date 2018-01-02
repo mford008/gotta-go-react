@@ -1,5 +1,5 @@
 export * from './Header';
-export * from './NavLogo';
-export * from './NavMenu';
+export * from './NavbarLogo';
+export * from './NavbarMenu';
 export * from './Plus';
 export * from './MenuItem';
