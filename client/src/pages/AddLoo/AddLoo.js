@@ -8,7 +8,7 @@ import API from '../../utils/API';
 class AddLoo extends Component {
   state = {
     name: '',
-    address: '',
+    location: '',
     category: '',
     comment: ''
   };
@@ -50,8 +50,8 @@ class AddLoo extends Component {
             onChange={this.handleInputChange}
           />
           <InputField
-            value={this.state.address}
-            name='address'
+            value={this.state.location}
+            name='location'
             type='text'
             placeholder='Enter address'
             label='Address'
