@@ -9,9 +9,11 @@ module.exports = {
       .catch(err => res.json(err));
   },
   create: (req, res) => {
+    console.log('req', req.body);
     db.Restroom
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
+      .then(dbModel => console.log(dbModel))
+      // .then(dbModel => res.json(dbModel))
+      .catch(err => res.json(err));
   }
 };
