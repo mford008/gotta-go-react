@@ -1,25 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { GoogleMapLoader, GoogleMap } from 'react-google-maps';
 
-const Map = () => {
-  function initMap() {
-    var myLatLng = {lat: -25.363, lng: 131.044};
-
-    var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: myLatLng
-    });
-
-    var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'Hello World!'
-    });
+export class Map extends Component {
+  render() {
+    return (
+      <div>my Google Maps component</div>
+    )
   }
-
-  return (
-    <iframe
-      src='https://www.google.com/maps/embed/v1/place?q=Uluru&key=AIzaSyAO6DPj2O5ahIC8Pr36AL6nQDUH0APPmyM' allowfullscreen />
-  );
-};
+}
 
 export default Map;

@@ -3,6 +3,7 @@ import '../Login/Login.css';
 import API from '../../utils/API';
 import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
 import { Header } from '../../components/Header';
+import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
 class Landing extends Component {
@@ -22,11 +23,15 @@ class Landing extends Component {
       <div>
         <Header />
         <TabGroup>
-          <SingleTab className='fa-fa-map'>
-            Map
+          <SingleTab icon={'fa fa-map'}>
+            <Link to={'/landing-map'} style={{ padding: '0' }}>
+              Map
+            </Link>
           </SingleTab>
-          <SingleTab className='fa-fa-list'>
-            List
+          <SingleTab icon={'fa fa-list'}>
+            <Link to={'/landing'} style={{ padding: '0' }}>
+              List
+            </Link>
           </SingleTab>
         </TabGroup>
         <ListContainer>
