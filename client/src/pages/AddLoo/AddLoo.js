@@ -3,7 +3,6 @@ import { Btn, InputField, Category, Comment, Form } from '../../components/Form'
 import { Title } from '../../components/Title/Title.js';
 import { Header } from '../../components/Header';
 import API from '../../utils/API';
-// import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'react-google-maps';
 
 class AddLoo extends Component {
   state = {

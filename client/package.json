@@ -5,9 +5,9 @@
   "proxy": "http://localhost:3001/",
   "dependencies": {
     "react": "^16.2.0",
+    "react-css-modules": "4.7.1",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
-    "react-css-modules": "4.7.1"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
