@@ -44,7 +44,7 @@ class LandingMap extends Component {
             </Link>
           </SingleTab>
         </TabGroup>
-        <Map />
+        {/* <Map/> */}
       </div>
     );
   }
