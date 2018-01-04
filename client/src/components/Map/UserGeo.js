@@ -1,20 +1,8 @@
 import React, { Component } from 'react';
+// import {geolocated} from 'react-geolocated';
 
-export class UserGeo extends Component {
-  handleGeoPosition = (location) => {
-    this.props.getCoords(location.coords);
-    console.log(this.props.location);
-  }
-
-  getUserGeo = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(this.handleGeoPosition);
-    }
-  }
-
+export class UserGeo extends React.Component {
   render() {
-    return (
-      <div>{this.location}</div>
-    )
+    return 
   }
 }
