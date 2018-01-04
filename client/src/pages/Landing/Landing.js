@@ -32,15 +32,11 @@ class Landing extends Component {
       <div>
         <Header />
         <TabGroup>
-          <SingleTab icon={'fa fa-map'}>
-            <Link to={'/landing-map'} style={{ padding: '0' }}>
-              Map
-            </Link>
+          <SingleTab link={'/landing-map'} icon={'fa fa-map'}>
+            Map
           </SingleTab>
-          <SingleTab icon={'fa fa-list'}>
-            <Link to={'/landing'} style={{ padding: '0' }}>
-              List
-            </Link>
+          <SingleTab link={'/landing'} icon={'fa fa-list'}>
+            List
           </SingleTab>
         </TabGroup>
         <ListContainer>
@@ -48,7 +44,12 @@ class Landing extends Component {
             <ListItem key={restroom._id}>
               <a href={'/restroom/' + restroom._id}>
               <h1><strong>{restroom.name}</strong></h1></a>
-              <h2>{restroom.location} - {restroom.category}</h2>
+              <h3>
+                <a href="https://www.google.com/maps/place/{restroom.location}">
+                  {restroom.location}
+                </a>
+              </h3>
+              <h2>{restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
               <h4>{restroom.comments.map(comments =>
