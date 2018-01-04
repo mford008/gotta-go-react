@@ -1,21 +1,12 @@
-import React from 'react'
-import PlacesAutocomplete, { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
-import { Field, Label, Control, Input } from 'bloomer';
+import React, { Component } from 'react'
+import PlacesAutocomplete from 'react-places-autocomplete';
+import { Field, Label, Control } from 'bloomer';
 
-export class AutocompleteInput extends React.Component {
+export class AutocompleteInput extends Component {
   constructor(props) {
     super(props)
     this.state = { address: '' }
     this.onChange = (address) => this.setState({ address })
-  }
-
-  handleFormSubmit = (event) => {
-    event.preventDefault()
-
-    geocodeByAddress(this.state.address)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .catch(error => console.error('Error', error))
   }
 
   render() {
