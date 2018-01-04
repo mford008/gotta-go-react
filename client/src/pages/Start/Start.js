@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Btn } from '../../components/Form';
+import { UserGeo } from '../../components/Map';
 import { Link } from 'react-router-dom';
 import './Start.css';
 
 class Start extends Component {
   render () {
     return (
+
       <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
         <div className='has-text-centered logo'>
           <img style={{ margin: '50px', height: '120px', width: 'auto' }} className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
@@ -31,6 +33,7 @@ class Start extends Component {
             Just use it
           </Link>
         </Btn>
+        <UserGeo />
       </div>
     );
   }
