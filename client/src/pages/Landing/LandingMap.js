@@ -3,7 +3,8 @@ import '../Login/Login.css';
 import API from '../../utils/API';
 // import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
 import { Header } from '../../components/Header';
-import { Map } from '../../components/Map';
+import { Map, MapContainer } from '../../components/Map';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
@@ -18,7 +19,7 @@ class LandingMap extends Component {
 
   componentDidMount () {
     API.loadRestrooms()
-    .then(res => console.log(res.data))
+    .then(res => this.setState({ restroomList: res.data }))
     // .then(res => this.setState({ restroomList: res.data }))
     .catch(err => console.log(err))
 
@@ -44,7 +45,14 @@ class LandingMap extends Component {
             </Link>
           </SingleTab>
         </TabGroup>
-        <Map/>
+        <MapContainer>
+            <Map>
+              {/* {this.state.restroomList.map(restroom => (
+                <Marker key={restroom._id}
+                  position={restroom.location}/>
+              ))} */}
+            </Map>
+        </MapContainer>
       </div>
     );
   }

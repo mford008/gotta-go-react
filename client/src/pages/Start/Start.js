@@ -33,7 +33,6 @@ class Start extends Component {
             Just use it
           </Link>
         </Btn>
-        <UserGeo />
       </div>
     );
   }

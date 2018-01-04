@@ -1534,6 +1534,12 @@ react-css-modules@4.7.1:
     lodash "^4.16.6"
     object-unfreeze "^1.1.0"
 
+react-geolocated@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-geolocated/-/react-geolocated-2.2.1.tgz#816b88d3d88afc5afde08e4d071b36cd16b4c34a"
+  dependencies:
+    prop-types "^15.5.8"
+
 react-google-maps@^9.4.3:
   version "9.4.3"
   resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.3.tgz#a89c1bcf79e7d4adc1573c85ee12e6a93c3bc808"
@@ -1549,10 +1555,6 @@ react-google-maps@^9.4.3:
     recompose "^0.26.0"
     scriptjs "^2.5.8"
     warning "^3.0.0"
-
-react-js-google-maps@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/react-js-google-maps/-/react-js-google-maps-1.5.1.tgz#efc432ae05b32c88cc8ae54b121bb53a533bc26c"
 
 react-router-dom@^4.2.2:
   version "4.2.2"
