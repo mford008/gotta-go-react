@@ -6,12 +6,15 @@ import { NavbarBrand, NavbarItem, NavbarBurger } from 'bloomer';
 
 class Header extends Component {
   state = {
-    isHidden: ''
+    isHidden: true
   }
 
   onClickBurger = event => {
     event.preventDefault();
-    console.log('poop');
+    if (this.state.isHidden) {
+      this.setState({isHidden:false})
+    }
+    else this.setState({isHidden:true})
   }
 
   render () {
@@ -22,9 +25,9 @@ class Header extends Component {
           <NavbarItem>
             <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
           </NavbarItem>
-          <NavbarBurger isHidden={this.state.isHidden} onClick={this.onClick} style={{ color: '#ffffff' }}></NavbarBurger>
+          <NavbarBurger onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
         </NavbarBrand>
-        <NavbarMenu>
+        <NavbarMenu isHidden={this.state.isHidden}>
           <MenuItem href='/landing'>Nearby</MenuItem>
           <MenuItem href='/account'>Account</MenuItem>
           <MenuItem href='/login'>Log in</MenuItem>
