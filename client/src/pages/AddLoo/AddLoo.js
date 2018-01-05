@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Btn, InputField, Category, Comment, Form } from '../../components/Form';
+import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
 import { Header } from '../../components/Header';
 import API from '../../utils/API';
@@ -13,12 +13,6 @@ class AddLoo extends Component {
   };
 
   handleInputChange = event => {
-    // let value = event.target.value;
-    // const name = event.target.name;
-    //
-    // if (name === 'Address') {
-    //   value = new google.maps.places.Autocomplete();
-    // }
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -48,14 +42,7 @@ class AddLoo extends Component {
             label='Location name'
             onChange={this.handleInputChange}
           />
-          <InputField
-            value={this.state.location}
-            name='location'
-            type='text'
-            placeholder='Enter address'
-            label='Address'
-            onChange={this.handleInputChange}
-          />
+          <AutocompleteInput />
           <Category
             value={this.state.category}
             name='category'

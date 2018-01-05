@@ -1537,6 +1537,12 @@ react-css-modules@4.7.1:
 react-google-maps@^9.4.4:
   version "9.4.4"
   resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.4.tgz#6ea4dec09fdc523db4e434150dd5f7d0b070bcfd"
+react-geolocated@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-geolocated/-/react-geolocated-2.2.1.tgz#816b88d3d88afc5afde08e4d071b36cd16b4c34a"
+  dependencies:
+    prop-types "^15.5.8"
+
   dependencies:
     babel-runtime "^6.11.6"
     can-use-dom "^0.1.0"
