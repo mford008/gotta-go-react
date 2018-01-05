@@ -8,11 +8,7 @@ import { TabGroup, SingleTab } from '../../components/TabGroup';
 
 class Landing extends Component {
   state = {
-    // since the mongoose call returns an array of all the restrooms in the DB,
-    // we can store them in an array and use the .map function to get info from
-    // every item in the respone (res.data)
     restroomList: []
-    // commentList: []
   }
 
   componentDidMount () {
@@ -20,11 +16,6 @@ class Landing extends Component {
     // .then(res => console.log(res.data))
     .then(res => this.setState({ restroomList: res.data }))
     .catch(err => console.log(err))
-
-    // API.loadComments()
-    // .then(res => this.setState({ commentList: res.data }))
-    // .then(console.log('comment test'))
-    // .catch(err => console.log(err));
   }
 
   render () {
@@ -52,7 +43,7 @@ class Landing extends Component {
               <h2>{restroom.category}</h2>
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
-              <h4>{restroom.comments.map(comments =>
+              <h4><strong>Comments:</strong> {restroom.comments.map(comments =>
                 (comments.ref)
               )}</h4>
             </ListItem>
