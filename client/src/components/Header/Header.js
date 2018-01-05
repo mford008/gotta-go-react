@@ -22,7 +22,7 @@ class Header extends Component {
           <NavbarItem>
             <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
           </NavbarItem>
-          <NavbarBurger isHidden={this.state.isHidden} onClick={this.onClick} style={{ color: '#ffffff' }}></NavbarBurger>
+          <NavbarBurger isHidden={this.state.isHidden} onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
         </NavbarBrand>
         <NavbarMenu>
           <MenuItem href='/landing'>Nearby</MenuItem>
