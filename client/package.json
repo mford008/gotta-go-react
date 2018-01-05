@@ -4,9 +4,11 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bloomer": "^0.6.3",
     "react": "^16.2.0",
     "react-css-modules": "4.7.1",
     "react-dom": "^16.2.0",
+    "react-google-maps": "^9.4.4",
     "react-scripts": "1.0.17"
   },
   "scripts": {

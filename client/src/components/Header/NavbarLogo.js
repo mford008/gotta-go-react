@@ -6,5 +6,6 @@ export const NavbarLogo = () =>
     <NavbarItem>
       <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
     </NavbarItem>
-    <NavbarBurger onClick={this.onClick} style={{ color: '#ffffff' }} />
+    <NavbarBurger style={{ color: '#ffffff' }} />
+
   </NavbarBrand>;
