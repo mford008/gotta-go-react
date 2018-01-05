@@ -11,7 +11,10 @@ class Header extends Component {
 
   onClickBurger = event => {
     event.preventDefault();
-    console.log('poop');
+    if (this.state.isHidden) {
+      this.setState({isHidden:false})
+    }
+    else this.setState({isHidden:true})
   }
 
   render () {
