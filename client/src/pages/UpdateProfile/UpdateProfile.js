@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Form } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
-import { Header } from '../../components/Header';
+import Header from '../../components/Header/Header.js';
 
 class UpdateProfile extends Component {
   render () {
