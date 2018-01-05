@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import { Navbar } from 'bloomer';
-import { Plus, NavbarLogo, NavbarMenu, MenuItem } from '../../components/Header';
+import { Plus, NavbarMenu, MenuItem } from '../../components/Header';
+import { NavbarBrand, NavbarItem, NavbarBurger } from 'bloomer';
+
 
 class Header extends Component {
   state = {
     isHidden: ''
   }
 
-  onClickBurger() {
-    console.log('meow!')
+  onClickBurger = event => {
+    event.preventDefault();
+    console.log('poop');
   }
+
   render () {
     return (
       <Navbar style={{backgroundColor: '#393f60', justifyContent: 'space-between'}}>
         <Plus />
-        <NavbarLogo isHidden={this.state.isHidden} onClick={this.onClickBurger}></NavbarLogo>
+        <NavbarBrand>
+          <NavbarItem>
+            <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
+          </NavbarItem>
+          <NavbarBurger isHidden={this.state.isHidden} onClick={this.onClick} style={{ color: '#ffffff' }}></NavbarBurger>
+        </NavbarBrand>
         <NavbarMenu>
           <MenuItem href='/landing'>Nearby</MenuItem>
           <MenuItem href='/account'>Account</MenuItem>
