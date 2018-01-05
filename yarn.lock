@@ -1081,6 +1081,10 @@ latest-version@^3.0.0:
   dependencies:
     package-json "^4.0.0"
 
+lodash.debounce@^4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+
 lodash.get@4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
@@ -1534,15 +1538,15 @@ react-css-modules@4.7.1:
     lodash "^4.16.6"
     object-unfreeze "^1.1.0"
 
-react-google-maps@^9.4.4:
-  version "9.4.4"
-  resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.4.tgz#6ea4dec09fdc523db4e434150dd5f7d0b070bcfd"
 react-geolocated@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/react-geolocated/-/react-geolocated-2.2.1.tgz#816b88d3d88afc5afde08e4d071b36cd16b4c34a"
   dependencies:
     prop-types "^15.5.8"
 
+react-google-maps@^9.4.4:
+  version "9.4.4"
+  resolved "https://registry.yarnpkg.com/react-google-maps/-/react-google-maps-9.4.4.tgz#6ea4dec09fdc523db4e434150dd5f7d0b070bcfd"
   dependencies:
     babel-runtime "^6.11.6"
     can-use-dom "^0.1.0"
@@ -1555,6 +1559,13 @@ react-geolocated@^2.2.1:
     recompose "^0.26.0"
     scriptjs "^2.5.8"
     warning "^3.0.0"
+
+react-places-autocomplete@^5.4.3:
+  version "5.4.3"
+  resolved "https://registry.yarnpkg.com/react-places-autocomplete/-/react-places-autocomplete-5.4.3.tgz#321166247a9279b93ff21ee59112836058dda0ba"
+  dependencies:
+    lodash.debounce "^4.0.8"
+    prop-types "^15.5.8"
 
 react-router-dom@^4.2.2:
   version "4.2.2"
