@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Form } from '../../components/Form';
-import { Header } from '../../components/Header';
+import Header from '../../components/Header/Header.js';
 import { Title } from '../../components/Title/Title.js';
 import './Login.css';
 
