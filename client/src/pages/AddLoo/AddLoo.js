@@ -22,6 +22,10 @@ class AddLoo extends Component {
     });
   };
 
+  // handleChange(event) {
+  //   this.setState({value: event.target.value});
+  // }
+
   handleFormSubmit = event => {
     event.preventDefault();
 
@@ -60,7 +64,7 @@ class AddLoo extends Component {
             label='Select Category'
             value={this.state.category}
             name='category'
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <Comment
             value={this.state.comment}
