@@ -7,12 +7,12 @@ import './Start.css';
 
 class Start extends Component {
   state = {
-
+    loading: true
   }
-  
+
   componentDidMount () {
-    // setTimeout(() => { this.setState({ }); }.bind(this), 3000);
-    // const timer = setTimeout(this.displaySpinner, 3000)
+    setTimeout(() => this.setState({ loading: false }), 3000)
+
     navigator.geolocation.getCurrentPosition(pos => {
       const coords = pos.coords;
       this.setState({
@@ -23,16 +23,16 @@ class Start extends Component {
     });
   }
 
-  displaySpinner() {
-    // this.refs.main.setAttredute('class', 'hide')
-    // this.refs.spinner.setAt tredute('class', 'block')
-  }
-
-
   render () {
+    let { loading } = this.state;
+
+    if (loading) {
+      return <Spinner />
+    }
+
+
     return (
       <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
-        {/* <Spinner ref='spinner'/> */}
         <div ref='main' style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
           <div className='has-text-centered logo'>
             <img style={{ margin: '50px', height: '120px', width: 'auto' }} className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />

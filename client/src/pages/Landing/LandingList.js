@@ -6,7 +6,7 @@ import Header from '../../components/Header/Header.js';
 import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 
-class Landing extends Component {
+export class LandingList extends Component {
   state = {
     restroomList: []
   }
@@ -27,15 +27,6 @@ class Landing extends Component {
     console.log(this.state.currentLocation);
     return (
       <div>
-        <Header />
-        <TabGroup>
-          <SingleTab link={'/landing-map'} icon={'fa fa-map'}>
-            Map
-          </SingleTab>
-          <SingleTab link={'/landing'} icon={'fa fa-list'}>
-            List
-          </SingleTab>
-        </TabGroup>
         <ListContainer>
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
@@ -61,4 +52,4 @@ class Landing extends Component {
   }
 }
 
-export default Landing;
+export default LandingList;
