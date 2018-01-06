@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Route, Switch , Link } from 'react-router-dom';
-import { TabGroup, SingleTab } from '../../components/TabGroup';
+import '../Login/Login.css';
+import API from '../../utils/API';
+import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
 import Header from '../../components/Header/Header.js';
-import LandingMap from './LandingMap.js';
-import LandingList from './LandingList.js';
+import { Link } from 'react-router-dom';
+import { TabGroup, SingleTab } from '../../components/TabGroup';
 
-<<<<<<< HEAD:client/src/pages/Landing/LandingList.js
-export class LandingList extends Component {
+class LandingList extends Component {
   state = {
     restroomList: []
   }
@@ -23,13 +23,10 @@ export class LandingList extends Component {
     return link;
   }
 
-=======
-class Landing extends Component {
->>>>>>> db82c7d34b5a76ebd357c37916392565459c0014:client/src/pages/Landing/Landing.js
   render () {
+    console.log(this.state.currentLocation);
     return (
       <div>
-<<<<<<< HEAD:client/src/pages/Landing/LandingList.js
         <ListContainer>
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
@@ -50,25 +47,8 @@ class Landing extends Component {
           ))}
         </ListContainer>
 
-=======
-        <Header />
-        <TabGroup>
-          <SingleTab link={'/landing/landing-map'} icon={'fa fa-map'}>
-            Map
-          </SingleTab>
-          <SingleTab link={'/landing'} icon={'fa fa-list'}>
-            List
-          </SingleTab>
-        </TabGroup>
-        <div>
-          <Switch>
-            <Route path="/landing/landing-map" component={LandingMap} />
-            <Route exact path="/landing" component={LandingList} />
-          </Switch>
-        </div>
->>>>>>> db82c7d34b5a76ebd357c37916392565459c0014:client/src/pages/Landing/Landing.js
       </div>
-    )
+    );
   }
 }
 

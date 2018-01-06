@@ -16,7 +16,15 @@ const RestroomSchema = new Schema({
   category: {
     type: String
   },
-  comment: [{
+  lat: {
+    type: Number,
+    required: true
+  },
+  lng: {
+    type: Number,
+    required: true
+  },
+  comments: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'
   }],

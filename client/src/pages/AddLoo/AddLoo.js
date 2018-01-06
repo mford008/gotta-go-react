@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
+<<<<<<< HEAD
+=======
+// import { Header } from '../../components/Header';
+>>>>>>> db82c7d34b5a76ebd357c37916392565459c0014
 import Header from '../../components/Header/Header.js';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import API from '../../utils/API';
@@ -14,7 +18,7 @@ class AddLoo extends Component {
     coords: ''
   };
 
-  handleInputChange = event => {
+  handleChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
@@ -33,7 +37,7 @@ class AddLoo extends Component {
     // console.log(this.state)
     API.addLoo(this.state)
     .then(res => console.log({ results: res.data }))
-    // .then(res => this.setState({ results: res.data }))
+
     .catch(err => console.log(err));
   }
 
@@ -50,18 +54,23 @@ class AddLoo extends Component {
             type='text'
             placeholder='e.g. park, cafe'
             label='Location name'
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <AutocompleteInput />
+          <br />
+          <br />
           <Category
+            label='Select Category'
             value={this.state.category}
             name='category'
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <Comment
             value={this.state.comment}
+            placeholder='Leave comment here'
             name='comment'
-            onChange={this.handleInputChange}
+            label='Comment (optional)'
+            onChange={this.handleChange}
           />
           <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
         </Form>
