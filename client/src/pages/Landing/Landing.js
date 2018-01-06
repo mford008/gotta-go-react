@@ -15,10 +15,16 @@ class Landing extends Component {
     API.loadRestrooms()
     // .then(res => console.log(res.data))
     .then(res => this.setState({ restroomList: res.data }))
-    .catch(err => console.log(err))
+  }
+
+  restroomLink = string => {
+    let link = "https://www.google.com/maps/place/";
+    link += string;
+    return link;
   }
 
   render () {
+    console.log(this.state.currentLocation);
     return (
       <div>
         <Header />
@@ -36,7 +42,7 @@ class Landing extends Component {
               <a href={'/restroom/' + restroom._id}>
               <h1><strong>{restroom.name}</strong></h1></a>
               <h3>
-                <a href="https://www.google.com/maps/place/{restroom.location}">
+                <a href={this.restroomLink(restroom.location)}>
                   {restroom.location}
                 </a>
               </h3>

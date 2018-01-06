@@ -20,9 +20,8 @@ class LandingMap extends Component {
 
   componentDidMount () {
     API.loadRestrooms()
+    .then(res => (console.log(res.data)))
     .then(res => this.setState({ restroomList: res.data }))
-    .then(this.gettingGeo())
-    // .then(res => this.setState({ restroomList: res.data }))
     .catch(err => console.log(err))
 
     // API.loadComments()
@@ -30,16 +29,6 @@ class LandingMap extends Component {
     // .then(console.log('comment test'))
     // .catch(err => console.log(err));
   }
-
-  gettingGeo() {
-    this.state.restroomList.map(restroom => (
-      geocodeByAddress(restroom.location)
-        .then(results => getLatLng(results[0]))
-        .then(latLng => console.log('Success', latLng))
-        .catch(error => console.error('Error', error))
-    ))
-  }
-
 
   render () {
     return (
@@ -57,7 +46,7 @@ class LandingMap extends Component {
             <Map>
               {/* {this.state.restroomList.map(restroom => (
                 <Marker key={restroom._id}
-                  position={restroom.location}/>
+                  position={restroom.lat, restromm.lng}/>
               ))} */}
             </Map>
         </MapContainer>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
-import Header from '../../components/Header/Header.js';
+import { Header } from '../../components/Header';
+import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import API from '../../utils/API';
 
 class AddLoo extends Component {
@@ -9,7 +10,8 @@ class AddLoo extends Component {
     name: '',
     location: '',
     category: '',
-    comment: ''
+    comment: '',
+    coords: ''
   };
 
   handleInputChange = event => {
@@ -21,7 +23,14 @@ class AddLoo extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state)
+
+    //
+    // geocodeByAddress(this.state.address)
+    //   .then(results => getLatLng(results[0]))
+    //   .then(latLng => console.log('Success', latLng))
+    //   .catch(error => console.error('Error', error))
+
+    // console.log(this.state)
     API.addLoo(this.state)
     .then(res => console.log({ results: res.data }))
     // .then(res => this.setState({ results: res.data }))
@@ -30,7 +39,8 @@ class AddLoo extends Component {
 
   render () {
     return (
-      <div style={{ backgroundColor: '#f9fafb', width: '100%', height: '100%' }} className='content'>
+      <div style={{ backgroundColor: '#f9fafb', width: '100%', height: '100%' }}
+           className='content'>
         <Header />
         <Title>ADD A RESTROOM</Title>
         <Form>

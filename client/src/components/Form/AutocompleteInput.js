@@ -13,20 +13,29 @@ export class AutocompleteInput extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChange,
+      placeholder: 'enter address'
     }
 
     const cssClasses = {
       input: 'input',
     }
 
+    const styling = {
+      position: 'absolute',
+      zIndex: 1000,
+      width: '100%',
+    }
+
     return (
       <Field>
         <Label>Address</Label>
         <Control>
+          <div style={styling}>
             <PlacesAutocomplete
               inputProps={inputProps}
-              className={cssClasses}
+              classNames={cssClasses}
              />
+          </div>
         </Control>
       </Field>
     )
