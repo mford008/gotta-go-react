@@ -15,16 +15,15 @@ class AddLoo extends Component {
     coords: ''
   };
 
-  handleInputChange = event => {
+  handleChange = event => {
+    console.log(event);
+    console.log(event.target);
+    console.log(event.target.value);
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-
-  // handleChange(event) {
-  //   this.setState({value: event.target.value});
-  // }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -38,7 +37,7 @@ class AddLoo extends Component {
     // console.log(this.state)
     API.addLoo(this.state)
     .then(res => console.log({ results: res.data }))
-    
+
     .catch(err => console.log(err));
   }
 
@@ -55,7 +54,7 @@ class AddLoo extends Component {
             type='text'
             placeholder='e.g. park, cafe'
             label='Location name'
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <AutocompleteInput />
           <br />
@@ -71,7 +70,7 @@ class AddLoo extends Component {
             placeholder='Leave comment here'
             name='comment'
             label='Comment (optional)'
-            onChange={this.handleInputChange}
+            onChange={this.handleChange}
           />
           <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
         </Form>
