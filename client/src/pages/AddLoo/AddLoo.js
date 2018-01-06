@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
+<<<<<<< HEAD
+=======
 // import { Header } from '../../components/Header';
+>>>>>>> db82c7d34b5a76ebd357c37916392565459c0014
 import Header from '../../components/Header/Header.js';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import API from '../../utils/API';

@@ -4,7 +4,7 @@ import { Plus, NavbarMenu, MenuItem } from '../../components/Header';
 import { NavbarBrand, NavbarItem, NavbarBurger } from 'bloomer';
 
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     isHidden: true
   }
