@@ -16,6 +16,8 @@ const restroomSeed = [
     name: 'Paradise Park',
     location: '6334 San Pablo Ave, Oakland, CA 94608',
     category: 'Restaurant',
+    lat: 37.8468391,
+    lng: -122.28465549999999,
     comments: [
       {
         ref: 'Good food'
@@ -30,6 +32,8 @@ const restroomSeed = [
     name: 'Chevron',
     location: '2996 Telegraph Ave, Berkeley, CA 94705',
     category: 'Gas Station',
+    lat: 37.8194074,
+    lng: -122.26707799999997,
     comments: [
       {
         ref: 'good gas prices'
@@ -44,6 +48,8 @@ const restroomSeed = [
     name: 'Claremont Branch Library',
     location: '2940 Benvenue Ave, Berkeley, CA 94705',
     category: 'Other',
+    lat: 37.8566035,
+    lng: -122.2543607,
     comments: [
       {
         ref: 'Super quiet'
