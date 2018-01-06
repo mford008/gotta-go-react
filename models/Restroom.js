@@ -17,10 +17,10 @@ const RestroomSchema = new Schema({
     type: String
   },
   geolat: {
-    type: String
+    type: Number
   },
   geolng: {
-    type: String
+    type: Number
   },
   comment: [{
     type: Schema.Types.ObjectId,
