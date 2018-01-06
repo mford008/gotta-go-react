@@ -1,9 +1,9 @@
 import React from 'react';
 import { Field, Label, Control, Select, option } from 'bloomer';
 
-export const Category = props =>
+export const Category = ({label, props}) =>
   <Field>
-    <Label>Select Category: </Label>
+    <Label>{label}</Label>
     <Control>
       <Select>
         <option>Gas Station</option>

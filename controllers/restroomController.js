@@ -12,8 +12,8 @@ module.exports = {
     console.log('req', req.body);
     db.Restroom
       .create(req.body)
-      .then(dbModel => console.log(dbModel))
-      // .then(dbModel => res.json(dbModel))
+      // .then(dbModel => console.log(dbModel))
+      .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
   }
 };
