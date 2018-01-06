@@ -16,6 +16,12 @@ const RestroomSchema = new Schema({
   category: {
     type: String
   },
+  geolat: {
+    type: String
+  },
+  geolng: {
+    type: String
+  },
   comment: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'
