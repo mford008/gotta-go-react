@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
 import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
-import { Header } from '../../components/Header';
+import Header from '../../components/Header/Header.js';
 import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
 

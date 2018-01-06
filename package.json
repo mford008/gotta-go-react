@@ -19,7 +19,6 @@
     "express": "^4.16.2",
     "mongoose": "^4.13.6",
     "react-css-modules": "4.7.1",
-    "react-dom": "^16.2.0",
     "react-geolocated": "^2.2.1",
     "react-google-maps": "^9.4.4",
     "react-places-autocomplete": "^5.4.3",

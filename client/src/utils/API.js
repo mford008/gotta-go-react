@@ -8,7 +8,4 @@ export default {
     console.log(newLoo);
     return axios.post('/api/restrooms', newLoo);
   }
-  // loadComments: function () {
-  //   return axios.get('/api/comments');
-  // }
 };
