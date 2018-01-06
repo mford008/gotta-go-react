@@ -34,7 +34,7 @@ class AddLoo extends Component {
     // console.log(this.state)
     API.addLoo(this.state)
     .then(res => console.log({ results: res.data }))
-    // .then(res => this.setState({ results: res.data }))
+    
     .catch(err => console.log(err));
   }
 

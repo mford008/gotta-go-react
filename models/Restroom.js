@@ -24,7 +24,7 @@ const RestroomSchema = new Schema({
     type: Number,
     required: true
   },
-  comment: [{
+  comments: [{
     type: Schema.Types.ObjectId,
     ref: 'Comment'
   }],
