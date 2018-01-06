@@ -16,9 +16,6 @@ class AddLoo extends Component {
   };
 
   handleChange = event => {
-    console.log(event);
-    console.log(event.target);
-    console.log(event.target.value);
     const { name, value } = event.target;
     this.setState({
       [name]: value
