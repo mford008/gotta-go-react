@@ -33,15 +33,6 @@ class LandingMap extends Component {
   render () {
     return (
       <div>
-        <Header />
-        <TabGroup>
-          <SingleTab link={'/landing-map'} icon={'fa fa-map'}>
-            Map
-          </SingleTab>
-          <SingleTab link={'/landing'} icon={'fa fa-list'}>
-            List
-          </SingleTab>
-        </TabGroup>
         <MapContainer>
             <Map>
               {/* {this.state.restroomList.map(restroom => (
