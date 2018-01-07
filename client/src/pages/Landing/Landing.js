@@ -50,7 +50,7 @@ class Landing extends Component {
               <h3>Hours: {restroom.hours}</h3>
               <h3>Rating: {restroom.rating}</h3>
               <h4><strong>Comments:</strong> {restroom.comments.map(comments =>
-                (comments.ref)
+                (comments.location.ref)
               )}</h4>
             </ListItem>
           ))}
