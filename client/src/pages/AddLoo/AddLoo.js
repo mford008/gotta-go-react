@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
-// import { Header } from '../../components/Header';
 import Header from '../../components/Header/Header.js';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 import API from '../../utils/API';
@@ -36,7 +35,7 @@ class AddLoo extends Component {
       }))
       // .then(console.log(this.state))
       // .then(latLng => console.log({lat: latLng.lat, lng: latLng.lng}))
-      .then(this.sendNewLoo())
+      // .then(this.sendNewLoo())
       .catch(error => console.error('Error', error))
 
     // console.log(this.state)
