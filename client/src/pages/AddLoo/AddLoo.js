@@ -12,7 +12,8 @@ class AddLoo extends Component {
     location: '',
     category: '',
     comment: '',
-    coords: ''
+    lat: 0,
+    lng: 0
   };
 
   handleChange = event => {
@@ -25,17 +26,30 @@ class AddLoo extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
 
-    //
-    // geocodeByAddress(this.state.address)
-    //   .then(results => getLatLng(results[0]))
-    //   .then(latLng => console.log('Success', latLng))
-    //   .catch(error => console.error('Error', error))
+    geocodeByAddress(this.state.location)
+      // .then(results => console.log(results))
+      // .then(results => console.log(results[0]))
+      .then(results => getLatLng(results[0]))
+      .then(latLng => this.setState({
+        lat: latLng.lat,
+        lng: latLng.lng
+      }))
+      // .then(console.log(this.state))
+      // .then(latLng => console.log({lat: latLng.lat, lng: latLng.lng}))
+      .then(this.sendNewLoo())
+      .catch(error => console.error('Error', error))
 
     // console.log(this.state)
+    // API.addLoo(this.state)
+    // .then(res => console.log({ results: res.data }))
+    //
+    // .catch(err => console.log(err));
+  }
+
+  sendNewLoo = () => {
     API.addLoo(this.state)
     .then(res => console.log({ results: res.data }))
-
-    .catch(err => console.log(err));
+    .catch(err => console.log(err))
   }
 
   render () {
@@ -53,9 +67,14 @@ class AddLoo extends Component {
             label='Location name'
             onChange={this.handleChange}
           />
-          <AutocompleteInput />
-          <br />
-          <br />
+          <InputField
+            label='Address'
+            value={this.state.location}
+            name='location'
+            placeholder='enter address'
+            onChange={this.handleChange}
+          />
+
           <Category
             label='Select Category'
             value={this.state.category}

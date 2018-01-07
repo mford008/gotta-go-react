@@ -3,33 +3,43 @@ import PlacesAutocomplete from 'react-places-autocomplete';
 import { Field, Label, Control } from 'bloomer';
 
 export class AutocompleteInput extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { address: '' }
-    this.onChange = (address) => this.setState({ address })
+  // constructor(props) {
+  //   super(props)
+  //   this.state = { address: '' }
+  //   this.onChange = (address) => this.setState({ address })
+  // }
+
+  state = {
+    address: ''
   }
 
-  render() {
+  onChangeFn = address => {
+    this.setState({
+      address: address
+    })
+  }
+
+  render () {
     const inputProps = {
       value: this.state.address,
-      onChange: this.onChange,
-      placeholder: 'enter address'
-    }
+      onChange: this.onChangeFn,
+      // placeholder: {this.props.placeholder}
+    };
 
     const cssClasses = {
-      input: 'input',
-    }
+      input: 'input'
+    };
 
     const styling = {
       position: 'absolute',
       zIndex: 1000,
-      width: '100%',
-    }
+      width: '100%'
+    };
 
     return (
       <Field>
-        <Label>Address</Label>
-        <Control>
+        <Label>{this.props.label}</Label>
+        <Control {...this.props}>
           <div style={styling}>
             <PlacesAutocomplete
               inputProps={inputProps}
@@ -38,6 +48,6 @@ export class AutocompleteInput extends Component {
           </div>
         </Control>
       </Field>
-    )
+    );
   }
 }
