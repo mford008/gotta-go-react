@@ -27,7 +27,6 @@ class AddLoo extends Component {
     console.log(this.state.address);
     geocodeByAddress(this.state.address)
       .then(results => getLatLng(results[0]))
-      // .then(sendInfo);
       .then(latLng => console.log('Success', latLng))
       .catch(error => console.error('Error', error))
 
@@ -41,7 +40,7 @@ class AddLoo extends Component {
       }))
       // .then(console.log(this.state))
       // .then(latLng => console.log({lat: latLng.lat, lng: latLng.lng}))
-      // .then(this.sendNewLoo())
+      .then(this.sendNewLoo())
       .catch(error => console.error('Error', error))
 
     // console.log(this.state)

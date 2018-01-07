@@ -19,10 +19,11 @@ module.exports = {
     };
     db.Restroom
       .create(newLoo)
-      .then(
+       .then(
         db.Comment
         .create({
-          body: req.body.comment
+          body: req.body.comment,
+          _id: req.body.location
         })
         .then(console.log('comment added'))
       )

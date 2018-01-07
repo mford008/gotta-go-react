@@ -18,11 +18,7 @@ const restroomSeed = [
     category: 'Restaurant',
     lat: 37.8468391,
     lng: -122.28465549999999,
-    comments: [
-      {
-        ref: 'Good food'
-      }
-    ],
+    comments: [],
     createdAt: Date.now,
     rating: 4,
     verified: false,
@@ -34,11 +30,7 @@ const restroomSeed = [
     category: 'Gas Station',
     lat: 37.8194074,
     lng: -122.26707799999997,
-    comments: [
-      {
-        ref: 'good gas prices'
-      }
-    ],
+    comments: [],
     createdAt: Date.now,
     rating: 3,
     verified: false,
@@ -50,36 +42,11 @@ const restroomSeed = [
     category: 'Other',
     lat: 37.8566035,
     lng: -122.2543607,
-    comments: [
-      {
-        ref: 'Super quiet'
-      }
-    ],
+    comments: [],
     createdAt: Date.now,
     rating: 4,
     verified: false,
     hours: '12pm-8pm'
-  }
-];
-
-const commentSeed = [
-  {
-    body: 'Good food',
-    created: {
-      type: Date.now
-    }
-  },
-  {
-    body: 'good gas prices',
-    created: {
-      type: Date.now
-    }
-  },
-  {
-    body: 'Super quiet',
-    created: {
-      type: Date.now
-    }
   }
 ];
 
@@ -88,18 +55,6 @@ db.Restroom
   .then(() => db.Restroom.collection.insertMany(restroomSeed))
   .then(data => {
     console.log(data.insertedIds.length + ' records inserted');
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
-
-db.Comment
-  .remove({})
-  .then(() => db.Comment.collection.insertMany(commentSeed))
-  .then(data => {
-    console.log(data.insertedIds.length + ' comments inserted');
     process.exit(0);
   })
   .catch(err => {
