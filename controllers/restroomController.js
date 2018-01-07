@@ -10,9 +10,22 @@ module.exports = {
   },
   create: (req, res) => {
     console.log('req', req.body);
+    let newLoo = {
+      name: req.body.name,
+      location: req.body.location,
+      category: req.body.category,
+      lat: req.body.lat,
+      lng: req.body.lng
+    };
     db.Restroom
-      .create(req.body)
-      // .then(dbModel => console.log(dbModel))
+      .create(newLoo)
+      .then(
+        db.Comment
+        .create({
+          body: req.body.comment
+        })
+        .then(console.log('comment added'))
+      )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
   }
