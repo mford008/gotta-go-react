@@ -1,8 +1,13 @@
 import React from 'react';
+import { CommentButton, CommentList, CommentItem } from '../List';
+import { InputField, Btn } from '../Form';
 
-export const CommentContainer = ({ ...comment }) =>
+export const CommentContainer = props =>
   <div>
-    <ul className="list-comment-item" style={{ color: '#393f60' }}>
-      { comment }
-    </ul>
+    <CommentButton />
+    <CommentList>
+      <CommentItem />
+    </CommentList>
+    <InputField />
+    <Btn />
   </div>;
