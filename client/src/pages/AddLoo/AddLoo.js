@@ -24,6 +24,11 @@ class AddLoo extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    console.log(this.state.address);
+    geocodeByAddress(this.state.address)
+      .then(results => getLatLng(results[0]))
+      .then(latLng => console.log('Success', latLng))
+      .catch(error => console.error('Error', error))
 
     geocodeByAddress(this.state.location)
       // .then(results => console.log(results))
