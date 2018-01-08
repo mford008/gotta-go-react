@@ -24,5 +24,14 @@ module.exports = {
       )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
+  },
+  updateComments: (req, res) => {
+    db.Restroom
+      .findOneAndUpdate(
+        {_id: req.params.id},
+        {$push: {'comments': {'comment': req.body.comment}}}
+      )
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.json(err));
   }
 };
