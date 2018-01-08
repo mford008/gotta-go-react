@@ -19,10 +19,7 @@ const restroomSeed = [
     lat: 37.8468391,
     lng: -122.28465549999999,
     comments: [],
-    createdAt: Date.now,
-    rating: 4,
-    verified: false,
-    hours: '7AM - 8PM'
+    createdAt: Date.now
   },
   {
     name: 'Chevron',
@@ -31,10 +28,7 @@ const restroomSeed = [
     lat: 37.8194074,
     lng: -122.26707799999997,
     comments: [],
-    createdAt: Date.now,
-    rating: 3,
-    verified: false,
-    hours: 'unknown'
+    createdAt: Date.now
   },
   {
     name: 'Claremont Branch Library',
@@ -43,10 +37,7 @@ const restroomSeed = [
     lat: 37.8566035,
     lng: -122.2543607,
     comments: [],
-    createdAt: Date.now,
-    rating: 4,
-    verified: false,
-    hours: '12pm-8pm'
+    createdAt: Date.now
   }
 ];
 

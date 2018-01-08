@@ -38,16 +38,9 @@ class AddLoo extends Component {
         lat: latLng.lat,
         lng: latLng.lng
       }))
-      // .then(console.log(this.state))
       // .then(latLng => console.log({lat: latLng.lat, lng: latLng.lng}))
       .then(this.sendNewLoo())
       .catch(error => console.error('Error', error))
-
-    // console.log(this.state)
-    // API.addLoo(this.state)
-    // .then(res => console.log({ results: res.data }))
-    //
-    // .catch(err => console.log(err));
   }
 
   sendNewLoo = () => {

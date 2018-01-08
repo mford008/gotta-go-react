@@ -24,12 +24,13 @@ const RestroomSchema = new Schema({
     type: Number,
     required: true
   },
-  commentList: [{
+  comments: [{
     comment: {
-      type: String,
-      body: String,
-      created: Date,
-      default: Date.now
+      type: String
+    },
+    createdAt: {
+      type: Date,
+      default: Date.Now
     }
   }],
   createdAt: {
