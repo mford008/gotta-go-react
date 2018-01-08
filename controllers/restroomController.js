@@ -26,6 +26,7 @@ module.exports = {
       .catch(err => res.json(err));
   },
   updateComments: (req, res) => {
+    console.log(req.body);
     db.Restroom
       .findOneAndUpdate(
         {_id: req.params.id},
