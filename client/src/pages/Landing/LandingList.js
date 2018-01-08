@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
+import { ListContainer, ListItem, CommentContainer, CommentItem, CommentButton, CommentList } from "../../components/List";
 import Header from '../../components/Header/Header.js';
 import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
@@ -10,6 +10,7 @@ class LandingList extends Component {
   state = {
     restroomList: [],
     currID: 0,
+    isHidden: true,
     comment: ''
   }
 
@@ -24,10 +25,15 @@ class LandingList extends Component {
     return link;
   }
 
-  // handleCommentToggle = event => {
-  //   event.preventDefault();
-  //   this.setState({currID: value})
-  // }
+  handleCommentToggle = event => {
+    event.preventDefault();
+    // this.setState({currID: value});
+    if (this.state.isHidden) {
+      this.setState({isHidden: false})
+    } else {
+      this.setState({isHidden: true})
+    }
+  }
 
   handleCommentSubmit = event => {
     event.preventDefault();
@@ -58,9 +64,18 @@ class LandingList extends Component {
                 </a>
               </h3>
               <h2>{restroom.category}</h2>
-              <h4><strong>Comments:</strong> {restroom.comments.map(comments =>
-                (comments.comment)
-              )}</h4>
+              <CommentButton onClick={this.handleCommentToggle}>
+                Comments
+              </CommentButton>
+              <CommentContainer isHidden={this.state.isHidden}>
+                <CommentList >
+                  {restroom.comments.map(comments =>
+                    <CommentItem key={comments._id}>
+                      <h4>{comments.comment}</h4>
+                    </CommentItem>
+                  )}
+                </CommentList>
+              </CommentContainer>
             </ListItem>
           ))}
         </ListContainer>

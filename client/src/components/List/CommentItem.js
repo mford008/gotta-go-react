@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const CommentItem = ({...comment}) => (
+export const CommentItem = props => (
   <li className="comment-group-item">
-    { comment }
+    { props.children }
   </li>
 );
