@@ -4,7 +4,6 @@ module.exports = {
   findAll: (req, res) => {
     db.Restroom
       .find({})
-      .populate('comment')
       .then(dbModel => res.send(dbModel))
       .catch(err => res.json(err));
   },
