@@ -1,13 +1,16 @@
 import React from 'react';
-import { CommentButton, CommentList, CommentItem } from '../List';
-import { InputField, Btn } from '../Form';
 
 export const CommentContainer = props =>
-  <div>
-    <CommentButton />
-    <CommentList>
-      <CommentItem />
-    </CommentList>
-    <InputField />
-    <Btn />
+  <div style={{display: props.isHidden ? 'none' : 'block'}}>
+    {props.children}
   </div>;
+
+  // export const CommentContainer = props =>
+  //   <div>
+  //     <Btn />
+  //     <CommentList>
+  //       <CommentItem />
+  //     </CommentList>
+  //     <InputField />
+  //     <Btn />
+  //   </div>;

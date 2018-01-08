@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { ListContainer, ListItem, CommentContainer, CommentItem } from "../../components/List";
+import { ListContainer, ListItem, CommentContainer, CommentButton } from "../../components/List";
+import { Btn, Comment } from '../../components/Form';
 import Header from '../../components/Header/Header.js';
 import { Link } from 'react-router-dom';
 import { TabGroup, SingleTab } from '../../components/TabGroup';
@@ -10,6 +11,7 @@ class LandingList extends Component {
   state = {
     restroomList: [],
     currID: 0,
+    isHidden: true,
     comment: ''
   }
 
@@ -24,13 +26,19 @@ class LandingList extends Component {
     return link;
   }
 
-  // handleCommentToggle = event => {
-  //   event.preventDefault();
-  //   this.setState({currID: value})
-  // }
+  handleCommentToggle = event => {
+    event.preventDefault();
+    this.setState({currID: event.target.value});
+    if (this.state.isHidden) {
+      this.setState({isHidden: false})
+    } else {
+      this.setState({isHidden: true})
+    }
+  }
 
   handleCommentSubmit = event => {
     event.preventDefault();
+    console.log(this.state.currID)
     API.newComment(this.state.currID, this.state.comment)
     .then(res => console.log({ results: res.data }))
     .catch(err => console.log(err))
@@ -44,7 +52,7 @@ class LandingList extends Component {
   }
 
   render () {
-    console.log(this.state.currentLocation);
+    // console.log(this.state.currentLocation);
     return (
       <div>
         <ListContainer>
@@ -58,9 +66,27 @@ class LandingList extends Component {
                 </a>
               </h3>
               <h2>{restroom.category}</h2>
-              <h4><strong>Comments:</strong> {restroom.comments.map(comments =>
-                (comments.comment)
-              )}</h4>
+              <CommentButton
+                onClick={this.handleCommentToggle}
+                value={restroom._id}>
+                Comments
+              </CommentButton>
+              <CommentContainer isHidden={this.state.isHidden}>
+                <ListContainer >
+                  {restroom.comments.map(comments =>
+                    <ListItem key={comments._id}>
+                      <h4>{comments.comment}</h4>
+                    </ListItem>
+                  )}
+                </ListContainer>
+                <Comment
+                  value={this.state.comment}
+                  placeholder='Leave comment here'
+                  name='comment'
+                  onChange={this.handleChange}
+                 />
+                <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
+              </CommentContainer>
             </ListItem>
           ))}
         </ListContainer>

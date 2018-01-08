@@ -18,7 +18,10 @@ const restroomSeed = [
     category: 'Restaurant',
     lat: 37.8468391,
     lng: -122.28465549999999,
-    comments: [],
+    comments: [{
+      comment: 'Nice on a sunny day.',
+      _id: '123'
+    }],
     createdAt: Date.now
   },
   {
@@ -27,7 +30,13 @@ const restroomSeed = [
     category: 'Gas Station',
     lat: 37.8194074,
     lng: -122.26707799999997,
-    comments: [],
+    comments: [{
+      comment: 'Not always clean.',
+      _id: '124'
+    }, {
+      comment: 'Reliable',
+      _id: '126'
+    }],
     createdAt: Date.now
   },
   {
@@ -36,7 +45,10 @@ const restroomSeed = [
     category: 'Other',
     lat: 37.8566035,
     lng: -122.2543607,
-    comments: [],
+    comments: [{
+      comment: 'Check open hours.',
+      _id: '125'
+    }],
     createdAt: Date.now
   }
 ];

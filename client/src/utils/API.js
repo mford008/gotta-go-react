@@ -10,6 +10,6 @@ export default {
   },
   newComment: function (id, comment) {
     console.log(comment);
-    return axios.post('/api/restrooms/' + id, comment);
+    return axios.post('/api/restrooms/' + id, {comment: comment});
   }
 };
