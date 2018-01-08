@@ -25,8 +25,13 @@ const RestroomSchema = new Schema({
     required: true
   },
   comments: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Comment'
+    comment: {
+      type: String
+    },
+    createdAt: {
+      type: Date,
+      default: Date.Now
+    }
   }],
   createdAt: {
     type: Date,

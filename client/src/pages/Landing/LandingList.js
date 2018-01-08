@@ -38,10 +38,8 @@ class LandingList extends Component {
                 </a>
               </h3>
               <h2>{restroom.category}</h2>
-              <h3>Hours: {restroom.hours}</h3>
-              <h3>Rating: {restroom.rating}</h3>
               <h4><strong>Comments:</strong> {restroom.comments.map(comments =>
-                (comments.ref)
+                (comments.comment)
               )}</h4>
             </ListItem>
           ))}

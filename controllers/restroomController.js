@@ -18,13 +18,10 @@ module.exports = {
       lng: req.body.lng
     };
     db.Restroom
-      .create(newLoo)
-      .then(
-        db.Comment
-        .create({
-          body: req.body.comment
-        })
-        .then(console.log('comment added'))
+      .findOneAndUpdate(
+        newLoo,
+        {$push: {'comments': {'comment': req.body.comment}}},
+        {upsert: true}
       )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
