@@ -8,12 +8,13 @@ import { TabGroup, SingleTab } from '../../components/TabGroup';
 
 class LandingList extends Component {
   state = {
-    restroomList: []
+    restroomList: [],
+    currID: 0,
+    comment: ''
   }
 
   componentDidMount () {
     API.loadRestrooms()
-    // .then(res => console.log(res.data))
     .then(res => this.setState({ restroomList: res.data }))
   }
 
@@ -21,6 +22,25 @@ class LandingList extends Component {
     let link = "https://www.google.com/maps/place/";
     link += string;
     return link;
+  }
+
+  // handleCommentToggle = event => {
+  //   event.preventDefault();
+  //   this.setState({currID: value})
+  // }
+
+  handleCommentSubmit = event => {
+    event.preventDefault();
+    API.newComment(this.state.currID, this.state.comment)
+    .then(res => console.log({ results: res.data }))
+    .catch(err => console.log(err))
+  }
+
+  handleChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
   }
 
   render () {
