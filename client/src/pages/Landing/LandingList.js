@@ -80,10 +80,10 @@ class LandingList extends Component {
                   )}
                 </ListContainer>
                 <Comment
-                  value={this.state.comment}
-                  placeholder='Leave comment here'
-                  name='comment'
-                  onChange={this.handleChange}
+                value={this.state.comment}
+                placeholder='Leave comment here'
+                name='comment'
+                onChange={this.handleChange}
                  />
                 <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
               </CommentContainer>
