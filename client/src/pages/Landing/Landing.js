@@ -14,14 +14,14 @@ class Landing extends Component {
           <SingleTab link={'/landing/landing-map'} icon={'fa fa-map'}>
             Map
           </SingleTab>
-          <SingleTab link={'/landing'} icon={'fa fa-list'}>
+          <SingleTab link={'/landing/landing-list'} icon={'fa fa-list'}>
             List
           </SingleTab>
         </TabGroup>
         <div>
           <Switch>
             <Route path="/landing/landing-map" component={LandingMap} />
-            <Route exact path="/landing" component={LandingList} />
+            <Route path="/landing/landing-list" component={LandingList} />
           </Switch>
         </div>
       </div>
