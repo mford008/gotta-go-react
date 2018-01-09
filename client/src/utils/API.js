@@ -11,5 +11,8 @@ export default {
   newComment: function (id, comment) {
     console.log(comment);
     return axios.post('/api/restrooms/' + id, {comment: comment});
+  },
+  addUser: function (newUser) {
+    console.log('new User called');
   }
 };
