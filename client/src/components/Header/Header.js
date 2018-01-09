@@ -19,13 +19,15 @@ class Header extends Component {
 
   render () {
     return (
-      <Navbar style={{backgroundColor: '#393f60', justifyContent: 'space-between'}}>
-        <Plus />
-        <NavbarBrand>
+      <Navbar style={{backgroundColor: '#393f60'}}>
+        <NavbarBrand style={{ justifyContent: 'space-between' }}>
+          <Plus />
           <NavbarItem>
             <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
           </NavbarItem>
-          <NavbarBurger onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
+          <NavbarItem>
+            <NavbarBurger onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
+          </NavbarItem>
         </NavbarBrand>
         <NavbarMenu isHidden={this.state.isHidden}>
           <MenuItem href='/landing'>Nearby</MenuItem>
