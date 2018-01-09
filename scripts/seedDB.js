@@ -11,6 +11,11 @@ mongoose.connect(
   }
 );
 
+let id1 = new mongoose.Types.ObjectId;
+let id2 = new mongoose.Types.ObjectId;
+let id3 = new mongoose.Types.ObjectId;
+let id4 = new mongoose.Types.ObjectId;
+
 const restroomSeed = [
   {
     name: 'Paradise Park',
@@ -20,7 +25,7 @@ const restroomSeed = [
     lng: -122.28465549999999,
     comments: [{
       comment: 'Nice on a sunny day.',
-      _id: '123'
+      _id: id1
     }],
     createdAt: Date.now
   },
@@ -32,10 +37,10 @@ const restroomSeed = [
     lng: -122.26707799999997,
     comments: [{
       comment: 'Not always clean.',
-      _id: '124'
+      _id: id2
     }, {
       comment: 'Reliable',
-      _id: '126'
+      _id: id3
     }],
     createdAt: Date.now
   },
@@ -47,7 +52,7 @@ const restroomSeed = [
     lng: -122.2543607,
     comments: [{
       comment: 'Check open hours.',
-      _id: '125'
+      _id: id4
     }],
     createdAt: Date.now
   }
