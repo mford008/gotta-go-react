@@ -25,7 +25,7 @@ class Landing extends Component {
           </Switch>
         </div>
       </div>
-    )
+    );
   }
 }
 

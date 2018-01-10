@@ -8,7 +8,6 @@ module.exports = {
       .catch(err => res.json(err));
   },
   create: (req, res) => {
-    console.log('req', req.body);
     let newLoo = {
       name: req.body.name,
       location: req.body.location,
@@ -26,11 +25,13 @@ module.exports = {
       .catch(err => res.json(err));
   },
   updateComments: (req, res) => {
-    console.log(req.body);
+    let newComment = {
+      'comment': req.body.comment
+    };
     db.Restroom
       .findOneAndUpdate(
         {_id: req.params.id},
-        {$push: {'comments': {'comment': req.body.comment}}}
+        {$push: {'comments': newComment}}
       )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));

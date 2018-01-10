@@ -64,7 +64,7 @@ class Start extends Component {
             </Link>
           </Btn>
           <Btn style={{ backgroundColor: '#f78255' }} >
-            <Link to={'/landing'} >
+            <Link to={'/landing/list'} >
               Just use it
             </Link>
           </Btn>

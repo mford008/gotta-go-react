@@ -3,9 +3,6 @@ import '../Login/Login.css';
 import API from '../../utils/API';
 import { ListContainer, ListItem, CommentContainer, CommentButton } from "../../components/List";
 import { Btn, Comment } from '../../components/Form';
-import Header from '../../components/Header/Header.js';
-import { Link } from 'react-router-dom';
-import { TabGroup, SingleTab } from '../../components/TabGroup';
 
 class LandingList extends Component {
   state = {

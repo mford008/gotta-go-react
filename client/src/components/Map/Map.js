@@ -6,15 +6,15 @@ export const Map = compose(
   withProps({
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `580px` }} />,
-    mapElement: <div style={{ height: `100%` }} />,
+    mapElement: <div style={{ height: `100%` }} />
   }),
   withGoogleMap
 )((props) => (
-    <GoogleMap
-      defaultZoom={12}
-      defaultCenter={{ lat: 37.8720727, lng:  -122.2712664 }}
-    >
-      {props.children}
-    </GoogleMap>
+  <GoogleMap
+    defaultZoom={12}
+    defaultCenter={{ lat: 37.8720727, lng: -122.2712664 }}
+  >
+    {props.children}
+  </GoogleMap>
   )
 );
