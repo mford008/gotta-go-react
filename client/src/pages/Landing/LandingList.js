@@ -27,8 +27,8 @@ class LandingList extends Component {
   }
 
   handleCommentToggle = event => {
-    // event.preventDefault();
-    this.setState({currID: this.value});
+    event.preventDefault();
+    this.setState({currID: event.target.value});
     if (this.state.isHidden) {
       this.setState({isHidden: false})
     } else {
@@ -67,7 +67,7 @@ class LandingList extends Component {
               </h3>
               <h2>{restroom.category}</h2>
               <CommentButton
-                onClick={this.handleCommentToggle.bind(this, restroom._id)}
+                onClick={this.handleCommentToggle}
                 value={restroom._id}>
                 Comments
               </CommentButton>
