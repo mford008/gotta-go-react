@@ -31,14 +31,11 @@ class AddLoo extends Component {
       .catch(error => console.error('Error', error))
 
     geocodeByAddress(this.state.location)
-      // .then(results => console.log(results))
-      // .then(results => console.log(results[0]))
       .then(results => getLatLng(results[0]))
       .then(latLng => this.setState({
         lat: latLng.lat,
         lng: latLng.lng
       }))
-      // .then(latLng => console.log({lat: latLng.lat, lng: latLng.lng}))
       .then(this.sendNewLoo())
       .catch(error => console.error('Error', error))
   }

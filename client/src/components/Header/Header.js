@@ -30,7 +30,7 @@ class Header extends Component {
           </NavbarItem>
         </NavbarBrand>
         <NavbarMenu isHidden={this.state.isHidden}>
-          <MenuItem href='/landing'>Nearby</MenuItem>
+          <MenuItem href='/landing/list'>Nearby</MenuItem>
           <MenuItem href='/account'>Account</MenuItem>
           <MenuItem href='/login'>Log in</MenuItem>
         </NavbarMenu>

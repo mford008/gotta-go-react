@@ -3,11 +3,6 @@ import PlacesAutocomplete from 'react-places-autocomplete';
 import { Field, Label, Control } from 'bloomer';
 
 export class AutocompleteInput extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = { address: '' }
-  //   this.onChange = (address) => this.setState({ address })
-  // }
 
   state = {
     address: ''
