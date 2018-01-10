@@ -76,11 +76,6 @@ class Start extends Component {
 
 export default Start;
 
-// const defaultState = {
-//   lat: 0,
-//   lng: 0
-// };
-
 const getLocation = () => ({ welcome: 'Hello User' });
 
 const store = createStore(
