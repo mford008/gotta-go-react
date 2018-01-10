@@ -20,6 +20,7 @@ class Signup extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     console.log(this.state);
+    this.sendUser();
   }
 
   sendUser = () => {

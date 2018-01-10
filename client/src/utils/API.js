@@ -13,7 +13,7 @@ export default {
     return axios.post('/api/restrooms/' + id, {comment: comment});
   },
   addUser: function (newUser) {
-    console.log('new User called');
-    return axios.post('/auth/users', newUser);
+    console.log('new User called', newUser);
+    return axios.post('/auth/signup', newUser);
   }
 };
