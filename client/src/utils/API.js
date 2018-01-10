@@ -14,6 +14,6 @@ export default {
   },
   addUser: function (newUser) {
     console.log('new User called',newUser);
-    return axios.post('/auth/signup/', newUser);
+    return axios.post('/api/user/signup', newUser);
   }
 };
