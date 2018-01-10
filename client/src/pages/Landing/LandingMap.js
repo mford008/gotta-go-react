@@ -14,15 +14,18 @@ class LandingMap extends Component {
     // since the mongoose call returns an array of all the restrooms in the DB,
     // we can store them in an array and use the .map function to get info from
     // every item in the respone (res.data)
-    restroomList: []
+    restroomList: [],
+
     // commentList: []
-  }
+  };
 
   componentDidMount () {
     API.loadRestrooms()
-    .then(res => (console.log(res.data)))
-    .then(res => this.setState({ restroomList: res.data }))
-    .catch(err => console.log(err))
+      .then(res => {
+        console.log(res.data); return res;
+      })
+      .then(res => this.setState({ restroomList: res.data }))
+      .catch(err => console.log(err));
 
     // API.loadComments()
     // .then(res => this.setState({ commentList: res.data }))
@@ -31,18 +34,22 @@ class LandingMap extends Component {
   }
 
   render () {
-    return (
-      <div>
-        <MapContainer>
-            <Map>
-              {/* {this.state.restroomList.map(restroom => (
-                <Marker key={restroom._id}
-                  position={restroom.lat, restromm.lng}/>
-              ))} */}
-            </Map>
-        </MapContainer>
-      </div>
-    );
+    try {
+      return (
+        <div>
+          <MapContainer>
+              <Map>
+                {this.state.restroomList.map(restroom => (
+                  <Marker key={restroom._id}
+                    position={{ lat: restroom.lat, lng: restroom.lng }} />
+                ))}
+              </Map>
+          </MapContainer>
+        </div>
+      );
+    } catch (e) {
+      return <pre><code>{ e.message }</code></pre>;
+    }
   }
 }
 

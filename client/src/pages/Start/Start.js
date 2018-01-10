@@ -3,13 +3,14 @@ import { Btn } from '../../components/Form';
 import { Spinner } from '../../components/Spinner/Spinner.js';
 import { UserGeo } from '../../components/Map';
 import { Link } from 'react-router-dom';
+import { createStore } from 'redux';
 import './Start.css';
 
 class Start extends Component {
   state = {
 
   }
-  
+
   componentDidMount () {
     // setTimeout(() => { this.setState({ }); }.bind(this), 3000);
     // const timer = setTimeout(this.displaySpinner, 3000)
@@ -65,3 +66,16 @@ class Start extends Component {
 }
 
 export default Start;
+
+// const defaultState = {
+//   lat: 0,
+//   lng: 0
+// };
+
+const getLocation = () => ({ welcome: "Hello User" });
+
+const store = createStore(
+  getLocation,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+console.log(store.getState());
