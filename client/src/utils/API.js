@@ -14,5 +14,6 @@ export default {
   },
   addUser: function (newUser) {
     console.log('new User called');
+    return axios.post('/auth/users', newUser);
   }
 };
