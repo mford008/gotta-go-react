@@ -27,7 +27,7 @@ class LandingList extends Component {
   }
 
   handleCommentToggle = event => {
-    event.preventDefault()
+    event.preventDefault();
     this.setState({currID: event.target.value});
     if (this.state.isHidden) {
       this.setState({isHidden: false})
