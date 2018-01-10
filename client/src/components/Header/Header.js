@@ -23,7 +23,7 @@ class Header extends Component {
         <NavbarBrand style={{ justifyContent: 'space-between' }}>
           <Plus />
           <NavbarItem>
-            <img style={{margin: '0'}} src='./transp-gotta-go.png' alt='gotta-go' />
+            <img style={{margin: '0'}} src='./../transp-gotta-go.png' alt='gotta-go' />
           </NavbarItem>
           <NavbarItem>
             <NavbarBurger onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
