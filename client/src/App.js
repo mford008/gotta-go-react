@@ -7,16 +7,18 @@ import LandingMap from './pages/Landing/LandingMap.js';
 import AddLoo from './pages/AddLoo/AddLoo.js';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux';
+
+// import { Provider } from 'react-redux';
 import store from './store.js';
 
 const App = () => {
   const style = {
     width: '100%',
-    height: '100%'
+    height: '100%',
   };
 
   return (
+
     // <Provider store={store}>
       <Router>
         <div style={style}>
@@ -30,7 +32,9 @@ const App = () => {
           </Switch>
         </div>
       </Router>
+
   // </Provider>
+
   );
 };
 
