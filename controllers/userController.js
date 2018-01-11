@@ -39,10 +39,6 @@ module.exports = {
       })
     }
     check(username,password)
-    // db.User
-    //   .findOne({'local.userName' : req.body.username})
-    //   .then(doc => console.log(doc))
-    //   .catch(err => res.json(err))
   }
 
 };
