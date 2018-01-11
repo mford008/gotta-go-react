@@ -5,7 +5,7 @@ export class Spinner extends Component {
 
     return (
       <div className='has-text-centered spinnerDiv'>
-        <img className="spinner" alt='loading...' src="./Rolling1.svg" />
+        <img className="spinner" alt='loading...' src="./Rolling.svg" />
       </div>
     );
   }
