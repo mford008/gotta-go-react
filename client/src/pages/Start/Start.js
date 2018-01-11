@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { Btn } from '../../components/Form';
 import { Link } from 'react-router-dom';
-import { createStore } from 'redux';
+import { getLocation } from '../../components/Map/actions';
 import './Start.css';
 
 class Start extends Component {
@@ -10,15 +12,18 @@ class Start extends Component {
   };
 
   componentDidMount () {
-    // const timer = setTimeout(this.displaySpinner, 3000)
-    navigator.geolocation.getCurrentPosition(pos => {
-      const coords = pos.coords;
-      this.setState({
-        lat: coords.latitude,
-        lng: coords.longitude
-      });
-      console.log(this.state)
-    });
+    // navigator.geolocation.getCurrentPosition(pos => {
+    //   const coords = pos.coords;
+    //   this.setState({
+    //     lat: coords.latitude,
+    //     lng: coords.longitude
+    //   });
+    //   console.log(this.state)
+    // });
+    const { getLocation, isLoaded } = this.props;
+    if (!isLoaded) {
+      getLocation();
+    }
   }
 
   gotIt = event => {
@@ -37,15 +42,18 @@ class Start extends Component {
                 className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
             </div>
             <div className='intro has-text-centered'>
-              <p><strong>Log in/Sign up</strong> to be able comment, save favorite places and add new locations.</p>
+              <p>
+                <strong>Log in/Sign up</strong>
+                to be able comment, save favorite places and add new locations.</p>
               <p> Or just use it for searching without registration.</p>
               <Btn style={{ backgroundColor: '#f78255' }}
                 onClick={this.gotIt}>Got it</Btn>
             </div>
           </div>
         </div>
-      )
+      );
     }
+
     return (
       <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
         <div ref='main' style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
@@ -74,12 +82,13 @@ class Start extends Component {
   }
 }
 
-export default Start;
+const mapStateToProps = state => ({
+  position: state.position.data,
+  isLoaded: state.position.locationLoaded,
+});
 
-const getLocation = () => ({ welcome: 'Hello User' });
-
-const store = createStore(
+const mapDispatchToProps = dispatch => bindActionCreators({
   getLocation,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
-console.log(store.getState());
+}, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Start);
