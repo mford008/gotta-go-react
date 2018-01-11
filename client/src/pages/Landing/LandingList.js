@@ -36,10 +36,9 @@ class LandingList extends Component {
     }
   }
 
-  handleCommentSubmit = event => {
-    event.preventDefault();
+  handleCommentSubmit = (comment, restroom) => {
     console.log(this.state.currID)
-    API.newComment(this.state.currID, this.state.comment)
+    API.newComment(restroom, comment)
     .then(res => console.log({ results: res.data }))
     .catch(err => console.log(err))
   }
@@ -80,14 +79,13 @@ class LandingList extends Component {
                   )}
                 </ListContainer>
                 <Comment
-                value={this.state.comment}
                 placeholder='Leave comment here'
                 name='comment'
-                onChange={this.handleChange}
+                restroom={restroom._id}
+                onSubmit={this.handleCommentSubmit.bind(this)}
                  />
-                <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
               </CommentContainer>
-            </ListItem>
+            </ListItem> // Need access to key
           ))}
         </ListContainer>
 
