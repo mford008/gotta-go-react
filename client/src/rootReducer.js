@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
-import postGeo from './postGeo';
+import position from './components/Map/reducer';
+import autocompleteInput from './components/Map/reducer';
 
 const rootReducer = combineReducers({
-  postGeo,
+  position,
   autocompleteInput,
-  routing: routerReducer
 });
 
 export default rootReducer;
