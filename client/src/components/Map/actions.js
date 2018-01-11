@@ -1,5 +1,6 @@
 export const GET_LOCATION = 'GET_LOCATION';
 export const GET_AUTO_INPUT = 'GET_AUTO_INPUT';
+export const RESET = 'RESET';
 
 export function getLocation() {
   return async function (dispatch) {
@@ -17,5 +18,11 @@ export function getAutocompleteInput() {
   return {
     type: 'GET_AUTO_INPUT',
     input: '',
+  }
+}
+
+export function resetGeo() {
+  return {
+    type: 'RESET',
   }
 }
