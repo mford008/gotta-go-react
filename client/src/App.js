@@ -3,7 +3,7 @@ import Start from './pages/Start/Start.js';
 import Login from './pages/Login/Login.js';
 import Signup from './pages/Signup/Signup.js';
 import Landing from './pages/Landing/Landing.js';
-import LandingMap from './pages/Landing/LandingMap.js';
+// import LandingMap from './pages/Landing/LandingMap.js';
 import AddLoo from './pages/AddLoo/AddLoo.js';
 import UpdateProfile from './pages/UpdateProfile/UpdateProfile.js';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
