@@ -55,21 +55,17 @@ export class LandingList extends Component {
           {this.state.restroomList.map(restroom => (
             <ListItem key={restroom._id}>
               <a href={'/restroom/' + restroom._id}>
-              <h1><strong>{restroom.name}</strong></h1></a>
+              <h2>{restroom.name}</h2></a>
               <h3>
                 <a href={this.restroomLink(restroom.location)}>
                   {restroom.location}
                 </a>
               </h3>
-              <div>
-                <h2 style={{ float: 'left', marginRight: '40px' }}>
-                  {restroom.category}
-                </h2>
+                <h4>{restroom.category}</h4>
                 <CommentButton
                   onClick={this.handleCommentToggle}
                   value={restroom._id}>
                 </CommentButton>
-              </div>
               <CommentContainer isHidden={this.state.isHidden}>
                 <ListContainer >
                   {restroom.comments.map(comments =>
