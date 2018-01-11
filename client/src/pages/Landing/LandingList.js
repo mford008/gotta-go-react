@@ -91,7 +91,6 @@ class LandingList extends Component {
             </ListItem>
           ))}
         </ListContainer>
-
       </div>
     );
   }
