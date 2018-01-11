@@ -37,6 +37,29 @@ li {
 	background-color: #393f60;
 }
 
+.navbar-item {
+  padding: 0;
+}
+
+div.navbar-item img {
+  padding-left: 10px;
+}
+
+div.navbar-item .icon {
+  margin-left: 10px;
+}
+
+div.navbar-dropdown .navbar-item {
+  padding: 5px 20px 5px 0;
+  text-align: right;
+  font-weight: 700;
+}
+
+.tabs li {
+  background-color: #f5ffff;
+  border: 1px solid #dbdbdb;
+}
+
 .tabs.is-boxed.is-fullwidth {
 	margin: 0;
 }
@@ -108,4 +131,7 @@ label.label {
 
 div ul li.list-group-item.tile {
   padding: 0 10px 10px 10px;
+  border: none;
+  border-bottom: 1px solid #eeeeee;
+  box-shadow: 0 1px 1px;
 }

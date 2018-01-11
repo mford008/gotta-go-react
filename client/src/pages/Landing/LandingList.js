@@ -49,7 +49,6 @@ class LandingList extends Component {
   }
 
   render () {
-    // console.log(this.state.currentLocation);
     return (
       <div>
         <ListContainer>
@@ -62,16 +61,21 @@ class LandingList extends Component {
                   {restroom.location}
                 </a>
               </h3>
-              <h2>{restroom.category}</h2>
-              <CommentButton
-                onClick={this.handleCommentToggle}
-                value={restroom._id}>
-                Comments
-              </CommentButton>
+              <div>
+                <h2 style={{ float: 'left', marginRight: '40px' }}>
+                  {restroom.category}
+                </h2>
+                <CommentButton
+                  onClick={this.handleCommentToggle}
+                  value={restroom._id}>
+                </CommentButton>
+              </div>
               <CommentContainer isHidden={this.state.isHidden}>
                 <ListContainer >
                   {restroom.comments.map(comments =>
-                    <ListItem key={comments._id}>
+                    <ListItem
+                      style={{ backgroundColor: '#dddddd', marginBottom: '5px' }}
+                      key={comments._id}>
                       <h4>{comments.comment}</h4>
                     </ListItem>
                   )}
