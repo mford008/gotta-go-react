@@ -4,7 +4,7 @@ import { Plus, NavbarMenu, MenuItem } from '../../components/Header';
 import { NavbarBrand, NavbarItem, NavbarBurger } from 'bloomer';
 
 
-class Header extends Component {
+export class Header extends Component {
   state = {
     isHidden: true
   }
@@ -31,6 +31,7 @@ class Header extends Component {
         </NavbarBrand>
         <NavbarMenu isHidden={this.state.isHidden}>
           <MenuItem href='/landing/list'>Nearby</MenuItem>
+          {/* <MenuItem href='/addloo'>Add Loo</MenuItem> */}
           <MenuItem href='/account'>Account</MenuItem>
           <MenuItem href='/login'>Log in</MenuItem>
         </NavbarMenu>

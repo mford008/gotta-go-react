@@ -5,7 +5,7 @@ import { ListContainer, CommentContainer, CommentButton } from "../../components
 import ListItem from '../../components/List/ListItem.js'
 import { Btn, Comment } from '../../components/Form';
 
-class LandingList extends Component {
+export class LandingList extends Component {
   state = {
     restroomList: [],
   }
@@ -23,7 +23,6 @@ class LandingList extends Component {
 
 
   render () {
-    // console.log(this.state.currentLocation);
     return (
       <div>
         <ListContainer>
@@ -39,9 +38,8 @@ class LandingList extends Component {
             />
           ))}
         </ListContainer>
-
       </div>
-    );
+    )
   }
 }
 

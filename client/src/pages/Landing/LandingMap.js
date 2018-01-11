@@ -24,7 +24,7 @@ class LandingMap extends Component {
       return (
         <div>
           <MapContainer>
-              <Map>
+              <Map >
                 {this.state.restroomList.map(restroom => (
                   <Marker key={restroom._id}
                     position={{ lat: restroom.lat, lng: restroom.lng }} />

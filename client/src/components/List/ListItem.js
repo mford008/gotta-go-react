@@ -3,8 +3,6 @@ import { ListContainer,  CommentContainer, CommentButton , CommentItem} from "..
 import { Btn, Comment } from '../../components/Form';
 import API from '../../utils/API';
 
-
-
 class ListItem extends Component {
   constructor (props){
     super(props);
