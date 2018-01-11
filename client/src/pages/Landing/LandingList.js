@@ -4,7 +4,7 @@ import API from '../../utils/API';
 import { ListContainer, ListItem, CommentContainer, CommentButton } from "../../components/List";
 import { Btn, Comment } from '../../components/Form';
 
-class LandingList extends Component {
+export class LandingList extends Component {
   state = {
     restroomList: [],
     currID: 0,
@@ -92,7 +92,7 @@ class LandingList extends Component {
           ))}
         </ListContainer>
       </div>
-    );
+    )
   }
 }
 

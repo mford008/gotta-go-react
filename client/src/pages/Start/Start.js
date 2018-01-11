@@ -19,7 +19,6 @@ class Start extends Component {
   }
 
   render () {
-    const { position } = this.props;
     const { loading } = this.state;
     if (loading) {
       <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
@@ -37,8 +36,8 @@ class Start extends Component {
           </div>
           <div className='intro has-text-centered'>
             <p>
-              <strong>Log in/Sign up</strong>
-              to be able comment, save favorite places and add new locations.</p>
+              <strong>Log in/Sign up </strong>
+               to be able comment, save favorite places and add new locations.</p>
             <p> Or just use it for browsing.</p>
           </div>
           <Btn style={{ backgroundColor: '#f78255' }} >
