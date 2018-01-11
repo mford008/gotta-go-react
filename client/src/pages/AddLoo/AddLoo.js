@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Btn, InputField, Category, Comment, Form, AutocompleteInput } from '../../components/Form';
+import { Btn, InputField, Category, Comment, Form } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
 import Header from '../../components/Header/Header.js';
 import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
