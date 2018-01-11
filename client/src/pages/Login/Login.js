@@ -9,7 +9,8 @@ import API from '../../utils/API'
 class Login extends Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    user: false
   }
 
   handleChange = event => {
@@ -25,11 +26,15 @@ class Login extends Component {
 
   checkUser = () => {
     API.checkUser(this.state)
-    .then(res => console.log({ results: res.data }))
+    .then(res => {
+      if (res.data.user) {
+      console.log('we can has user');
+    }})
     .catch(err => console.log(err))
   }
 
   render () {
+
     return (
       <div style={{ backgroundColor: '#f9fafb', width: '100%', height: '100%' }} className='content'>
         <Header />
