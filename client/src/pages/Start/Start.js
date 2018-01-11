@@ -12,18 +12,8 @@ class Start extends Component {
   };
 
   componentDidMount () {
-    // navigator.geolocation.getCurrentPosition(pos => {
-    //   const coords = pos.coords;
-    //   this.setState({
-    //     lat: coords.latitude,
-    //     lng: coords.longitude
-    //   });
-    //   console.log(this.state)
-    // });
-    const { getLocation, isLoaded } = this.props;
-    if (!isLoaded) {
-      getLocation();
-    }
+    const { getLocation } = this.props;
+    getLocation();
   }
 
   gotIt = event => {
@@ -32,7 +22,7 @@ class Start extends Component {
   }
 
   render () {
-
+    const { position } = this.props;
     if (this.state.loading) {
       return (
         <div style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
@@ -83,8 +73,7 @@ class Start extends Component {
 }
 
 const mapStateToProps = state => ({
-  position: state.position.data,
-  isLoaded: state.position.locationLoaded,
+  position: state.data,
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

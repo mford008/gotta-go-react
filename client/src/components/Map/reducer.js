@@ -1,8 +1,7 @@
-import { GET_LOCATION, GET_AUTO_INPUT } from './actions.js';
+import { GET_LOCATION, GET_AUTO_INPUT, RESET } from './actions.js';
 
 const initialState = {
   position: {},
-  locationLoaded: false,
   autocompleteInput: '',
 };
 
@@ -13,12 +12,17 @@ export default function (state = initialState, action) {
       return {
         ...state,
         position: data,
-        locationLoaded: true,
       };
-    case 'GET_AUTO_INPUT':
+    case GET_AUTO_INPUT:
       return {
         ...state,
         autocompleteInput: data,
+      };
+    case RESET:
+      return {
+        ...state,
+        position: {},
+        autocompleteInput: '',
       };
     default:
       return state;
