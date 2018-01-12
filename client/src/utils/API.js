@@ -18,6 +18,6 @@ export default {
   },
   checkUser: function (user) {
     console.log('checking user', user);
-    return axios.post('/auth/user/login', user)
+    return axios.post('/auth/user/login', user);
   }
 };

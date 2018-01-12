@@ -9,7 +9,7 @@ class AddLoo extends Component {
   state = {
     name: '',
     location: '',
-    category: '',
+    category: 'Gas Station',
     comment: '',
     lat: 0,
     lng: 0
