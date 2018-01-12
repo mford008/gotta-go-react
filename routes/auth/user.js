@@ -8,6 +8,6 @@ router.route('/login')
   .post(userController.check);
 
 router.route('/account')
-  .put(userController.changePassword);
+  .post(userController.changePassword);
 
 module.exports = router;
