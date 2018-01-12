@@ -15,6 +15,8 @@ class ListItem extends Component {
 
   handleCommentToggle = event => {
     event.preventDefault();
+    console.log(event.target);
+    console.log(event.target.value);
     this.setState({currID: event.target.value});
     if (this.state.isHidden) {
       this.setState({isHidden: false})
@@ -41,8 +43,9 @@ class ListItem extends Component {
 
   render(){
     console.log(this.state);
+    console.log(this.props.id);
     return (
-      <li className="list-group-item tile" key={this.props.key}>
+      <li className="list-group-item tile" key={this.props.id}>
         <h1><strong>{this.props.locationName}</strong></h1>
         <h3>
           <a href={this.props.href}>
@@ -52,9 +55,10 @@ class ListItem extends Component {
         <h2>{this.props.category}</h2>
         <CommentButton
           onClick={this.handleCommentToggle}
-          value={this.props.key}>
+          value={this.props.id}>
           Comments
         </CommentButton>
+        <br />
         <CommentContainer isHidden={this.state.isHidden}>
           <ListContainer >
             {this.props.commentArray.map(comments =>
@@ -64,10 +68,10 @@ class ListItem extends Component {
             )}
           </ListContainer>
           <Comment
-          value={this.state.comment}
-          placeholder='Leave comment here'
-          name='comment'
-          onChange={this.handleChange}
+            value={this.state.comment}
+            placeholder='Leave comment here'
+            name='comment'
+            onChange={this.handleChange}
            />
           <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
         </CommentContainer>
