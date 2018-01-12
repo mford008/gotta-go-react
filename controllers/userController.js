@@ -28,7 +28,7 @@ module.exports = {
         }
         if (!userMatch) {
           console.log('no such user');
-          return res.send({user: 'no user found'});
+          return res.send({user: 'username not found'});
         }
         if (!userMatch.checkPassword(pass)) {
           console.log('no match');

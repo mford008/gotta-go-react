@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Btn, InputField, Form } from '../../components/Form';
 import Header from '../../components/Header/Header.js';
 import { Title } from '../../components/Title/Title.js';
@@ -9,7 +10,8 @@ class Login extends Component {
   state = {
     username: '',
     password: '',
-    user: false
+    user: false,
+    error: ''
   }
 
   handleChange = event => {
@@ -23,8 +25,13 @@ class Login extends Component {
     API.checkUser(this.state)
     .then(res => {
       if (res.data.user === true) {
-      this.props.history.push('/landing/list')
-    }})
+        this.props.history.push('/landing/list')
+      } else if (res.data.user === 'username not found') {
+        this.setState({ error: 'Username not found' })
+      } else if (res.data.user === 'wrong password') {
+        this.setState({ error: 'Incorrect password' })
+      }
+    })
     .then(this.setState({username: '', password: ''}))
     .catch(error => console.error('Error', error))
     .catch(err => console.log(err))
@@ -58,6 +65,11 @@ class Login extends Component {
           >
             Log in
           </Btn>
+          <h4>{this.state.error}</h4>
+          <Link to='/signup'>
+            Not yet a member? Signup!
+          </Link>
+
         </Form>
       </div>
     );
