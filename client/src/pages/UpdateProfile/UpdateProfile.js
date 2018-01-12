@@ -23,7 +23,9 @@ class UpdateProfile extends Component {
   }
 
   updatePassword = () => {
-    API.changePassword(this.state);
+    API.changePassword(this.state)
+    .then(res => console.log({ results: res.data }))
+    .then(this.setState({username: '', password: '', newPassword: ''}))
     console.log('password changed');
   }
 

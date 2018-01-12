@@ -48,6 +48,7 @@ module.exports = {
     let newPassword = req.body.newpassword;
     const update = function (uname, pass, newpass) {
       db.User.findOne({'local.userName': uname}, (err, userMatch) => {
+        console.log(userMatch);
         if (err) {
           console.log(err);
           return err;
