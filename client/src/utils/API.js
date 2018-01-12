@@ -18,10 +18,10 @@ export default {
   },
   checkUser: function (user) {
     console.log('checking user', user);
-    return axios.post('/auth/user/login', user)
+    return axios.post('/auth/user/login', user);
   },
   changePassword: function (newPassword) {
-    console.log('password changed', newPassword)
-    return axios.put('/auth/user/account', newPassword)
+    console.log('password to change', newPassword);
+    return axios.put('/auth/user/account', newPassword);
   }
 };
