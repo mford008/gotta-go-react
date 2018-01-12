@@ -24,6 +24,8 @@ class Signup extends Component {
   sendUser = () => {
     API.addUser(this.state)
     .then(res => console.log({ results: res.data }))
+    .then(this.setState({username: '', password: ''}))
+    .catch(error => console.error('Error', error))
     .catch(err => console.log(err))
   }
 
