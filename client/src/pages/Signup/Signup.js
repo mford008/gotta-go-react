@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Btn, InputField, Form } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
 import Header from '../../components/Header/Header.js';
@@ -75,6 +76,11 @@ class Signup extends Component {
             </Btn>
         </Form>
         <h3>{this.state.error}</h3>
+        <div className="has-text-centered">
+          <Link to='/login'>
+            Already a Member? Login
+          </Link>
+        </div>
       </div>
     );
   }
