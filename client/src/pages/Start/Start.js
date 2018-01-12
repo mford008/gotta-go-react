@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { Btn } from '../../components/Form';
 import { Link } from 'react-router-dom';
 import { Spinner } from '../../components/Spinner';
-import { getLocation } from '../../components/Map/actions';
+import { getLocation, resetGeo } from '../../components/Map/actions';
 import './Start.css';
 
 class Start extends Component {
@@ -14,8 +14,10 @@ class Start extends Component {
 
   componentDidMount () {
     setTimeout(() => this.setState({ loading: false }), 3000);
-    const { getLocation } = this.props;
+    const { getLocation, resetGeo } = this.props;
+    resetGeo();
     getLocation();
+
   }
 
   render () {
@@ -67,6 +69,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => bindActionCreators({
   getLocation,
+  resetGeo,
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(Start);
