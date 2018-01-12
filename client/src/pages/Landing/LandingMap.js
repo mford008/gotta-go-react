@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
-import { Map, MapContainer } from '../../components/Map';
+import Map from '../../components/Map/Map';
+import MapContainer from '../../components/Map/MapContainer';
 import { Marker, Icon } from 'react-google-maps';
-// import { geocodeByAddress, getLatLng } from 'react-places-autocomplete';
 
 class LandingMap extends Component {
   state = {
@@ -25,10 +25,6 @@ class LandingMap extends Component {
         <div>
           <MapContainer>
               <Map >
-                <a><Marker
-                  label='Y'
-                  position={{ lat: 37.8720727, lng: -122.2712664 }}
-                /></a>
                 {this.state.restroomList.map(restroom => (
                   // switch (restroom.category) {
                   //   case 'gas station':

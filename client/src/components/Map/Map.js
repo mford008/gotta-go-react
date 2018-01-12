@@ -1,20 +1,42 @@
 import React from 'react';
 import { compose, withProps } from 'recompose';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export const Map = compose(
+const Map = compose(
   withProps({
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `580px` }} />,
     mapElement: <div style={{ height: `100%` }} />
   }),
   withGoogleMap
-)((props) => (
-  <GoogleMap
-    defaultZoom={12}
-    defaultCenter={{ lat: 37.8720727, lng: -122.2712664 }}
-  >
-    {props.children}
-  </GoogleMap>
-  )
+)((props) => {
+  return (
+    <GoogleMap
+      defaultZoom={12}
+      defaultCenter={{ lat: props.lat, lng: props.lng }}
+    >
+      <Marker
+        label='Y'
+        position={{ lat: props.lat, lng: props.lng }}
+      />
+      {props.children}
+    </GoogleMap>
+  );
+  }
 );
+
+function mapStateToProps(dispatch) {
+   return bindActionCreators({
+
+   }, dispatch);
+}
+
+export default connect(state => {
+  console.log(state.position)
+  return {
+    lat: state.position.latitude,
+    lng: state.position.longitude
+  };
+}, mapStateToProps)(Map);
