@@ -7,7 +7,9 @@ import API from '../../utils/API'
 class Signup extends Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    passConfirm: '',
+    error: ''
   }
 
   handleChange = event => {
@@ -18,12 +20,19 @@ class Signup extends Component {
   };
 
   handleFormSubmit = event => {
-    this.sendUser();
+    if (this.state.password === this.state.passConfirm) {
+      this.sendUser();
+    } else {
+      this.setState({ error: 'We have a password mismatch'})
+    }
   }
 
   sendUser = () => {
     API.addUser(this.state)
-    .then(res => console.log({ results: res.data }))
+    .then(res => {
+      this.props.history.push('/landing/list')
+      console.log({ results: res.data })
+    })
     .then(this.setState({username: '', password: ''}))
     .catch(error => console.error('Error', error))
     .catch(err => console.log(err))
@@ -52,12 +61,21 @@ class Signup extends Component {
             onChange={this.handleChange}
             name='password'
            />
+          <InputField
+            type='password'
+            placeholder='Re-enter password'
+            label='Confirm password'
+            value={this.state.passConfirm}
+            onChange={this.handleChange}
+            name='passConfirm'
+          />
           <Btn
             onClick={this.handleFormSubmit}
             >
               Sign up
             </Btn>
         </Form>
+        <h3>{this.state.error}</h3>
       </div>
     );
   }
