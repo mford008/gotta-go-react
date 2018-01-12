@@ -43,7 +43,9 @@ class AddLoo extends Component {
 
   sendNewLoo = () => {
     API.addLoo(this.state)
-    .then(res => console.log({ results: res.data }))
+    .then(res => {
+      this.props.history.push('/landing/list')
+      console.log({ results: res.data })})
     .catch(err => console.log(err))
   }
 

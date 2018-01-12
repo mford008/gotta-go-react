@@ -5,7 +5,6 @@ import { Title } from '../../components/Title/Title.js';
 import './Login.css';
 import API from '../../utils/API'
 
-
 class Login extends Component {
   state = {
     username: '',
@@ -24,7 +23,7 @@ class Login extends Component {
     API.checkUser(this.state)
     .then(res => {
       if (res.data.user === true) {
-      console.log('we can has user');
+      this.props.history.push('/landing/list')
     }})
     .then(this.setState({username: '', password: ''}))
     .catch(error => console.error('Error', error))
