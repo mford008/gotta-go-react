@@ -27,7 +27,7 @@ class Login extends Component {
   checkUser = () => {
     API.checkUser(this.state)
     .then(res => {
-      if (res.data.user) {
+      if (res.data.user === true) {
       console.log('we can has user');
     }})
     .then(this.setState({username: '', password: ''}))
