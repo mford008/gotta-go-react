@@ -20,10 +20,6 @@ class Login extends Component {
     });
   };
 
-  handleFormSubmit = event => {
-    this.checkUser();
-  }
-
   checkUser = () => {
     API.checkUser(this.state)
     .then(res => {
@@ -59,7 +55,7 @@ class Login extends Component {
             name='password'
            />
           <Btn
-            onClick={this.handleFormSubmit}
+            onClick={this.checkUser}
           >
             Log in
           </Btn>
