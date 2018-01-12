@@ -6,39 +6,67 @@ module.exports = {
     console.log('req', req.body);
     let newUser = {
       local: {
-        userName : req.body.username,
-        password : req.body.password
-      }}
+        userName: req.body.username,
+        password: req.body.password
+      }
+    };
     console.log(newUser);
     db.User
       .create(newUser)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.json(err));
   },
-  check: (req,res) => {
+  check: (req, res) => {
     console.log('req', req.body);
     let username = req.body.username;
     let password = req.body.password;
-    const check = function(uname,pass) {
-      db.User.findOne({'local.userName': uname},(err,userMatch)=>{
+    const check = function (uname, pass) {
+      db.User.findOne({'local.userName': uname}, (err, userMatch) => {
         if (err) {
           console.log(err);
-          return err
+          return err;
         }
         if (!userMatch) {
-          console.log("no such user");
-          return res.send({user: 'no user found'})
+          console.log('no such user');
+          return res.send({user: 'no user found'});
         }
         if (!userMatch.checkPassword(pass)) {
           console.log('no match');
-          return res.send({user: 'wrong password'})
+          return res.send({user: 'wrong password'});
         } else {
           console.log('match!!!');
-          res.send({user: true})
+          res.send({user: true});
         }
-      })
-    }
-    check(username,password)
+      });
+    };
+    check(username, password);
+  },
+  changePassword: (req, res) => {
+    console.log('req', req.body);
+    let username = req.body.username;
+    let password = req.body.password;
+    let newPassword = req.body.newpassword;
+    const update = function (uname, pass, newpass) {
+      db.User.findOne({'local.userName': uname}, (err, userMatch) => {
+        console.log(userMatch);
+        if (err) {
+          console.log(err);
+          return err;
+        }
+        if (!userMatch) {
+          console.log('no such user');
+          return res.send({user: 'no user found'});
+        }
+        if (!userMatch.checkPassword(pass)) {
+          console.log('no match');
+          return res.send({user: 'wrong password'});
+        } else {
+          console.log('match!!!');
+          res.send({user: true});
+          db.User.update({'password': pass}, {$set: {'password': userMatch.hashPassword(newpass)}});
+        }
+      });
+    };
+    update(username, password, newPassword);
   }
-
 };
