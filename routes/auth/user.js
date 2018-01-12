@@ -7,4 +7,7 @@ router.route('/signup')
 router.route('/login')
   .post(userController.check);
 
+router.route('/account')
+  .post(userController.changePassword);
+
 module.exports = router;

@@ -9,7 +9,7 @@ class AddLoo extends Component {
   state = {
     name: '',
     location: '',
-    category: '',
+    category: 'Gas Station',
     comment: '',
     lat: 0,
     lng: 0
@@ -28,6 +28,7 @@ class AddLoo extends Component {
     geocodeByAddress(this.state.address)
       .then(results => getLatLng(results[0]))
       .then(latLng => console.log('Success', latLng))
+      .then(this.setState({name: '', location: '', category: '', comment: ''}))
       .catch(error => console.error('Error', error))
 
     geocodeByAddress(this.state.location)

@@ -1,10 +1,7 @@
 import React from 'react';
+import { Btn } from '../../components/Form';
 
 export const CommentButton = props =>
   <div>
-    <a {...props}>
-      <img style={{ width: '20px' }} alt='...' className='comment-icon'
-        src="./../chat.svg"
-      />
-    </a>
-  </div>
+    <Btn {...props} icon={'fa fa-comments'} />
+  </div>;
