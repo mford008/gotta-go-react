@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ListContainer,  CommentContainer, CommentButton , CommentItem} from "../../components/List";
-import { Btn, Comment } from '../../components/Form';
+import { Comment } from '../../components/Form';
+import { AddCommentBtn } from '../../components/List';
 import API from '../../utils/API';
 
 class ListItem extends Component {
@@ -70,8 +71,7 @@ class ListItem extends Component {
             name='comment'
             onChange={this.handleChange}
            />
-          <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
-          <br/>
+          <AddCommentBtn onClick={this.handleCommentSubmit}> Add Comment </AddCommentBtn>
         </CommentContainer>
       </li>
     )

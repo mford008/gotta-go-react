@@ -6,7 +6,8 @@ html, body {
 }
 
 .intro {
-  margin: 20px;
+  /* background-image: url('.114081-OOR1BA-474.jpg'); */
+  margin: 0 20px 0 20px;
 }
 
 p strong {
@@ -20,13 +21,15 @@ button a {
 button.button {
   font-family: 'Raleway', sans-serif;
   background-color: #f78255;
-  width: 180px;
-  margin-bottom: 5px;
+  margin-top: 10px;
+  width: 220px;
+  /* font-weight: 300; */
+  border: none;
 }
 
 div p {
   font-family: 'Raleway', sans-serif;
-  margin-bottom: 12px;
+  margin: 0 40px 10px 40px;
   color: #f9fafb;
 }
 

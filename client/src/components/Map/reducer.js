@@ -1,23 +1,23 @@
-import { GET_LOCATION, GET_AUTO_INPUT, RESET } from './actions.js';
-
 const initialState = {
-
+  latitude: undefined,
+  longitude: undefined,
 };
 
 export default function (state = initialState, action) {
   const { type, data } = action;
   switch (type) {
-    case GET_LOCATION:
+    case 'GET_LOCATION':
       return {
         ...state,
-        data
+        latitude: data.latitude,
+        longitude: data.longitude,
       };
-    case GET_AUTO_INPUT:
+    case 'GET_AUTO_INPUT':
       return {
         ...state,
         autocompleteInput: data
       };
-    case RESET:
+    case 'RESET':
       return {
         initialState
       };
