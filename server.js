@@ -4,8 +4,6 @@ const mongoose = require('mongoose');
 const routes = require('./routes');
 const morgan = require('morgan');
 const session = require('express-session');
-// const MongoStore = require('connect-mongo')(session);
-const passport = require('passport');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -22,9 +20,6 @@ session({
   saveUninitialized: false
 })
 );
-
-app.use(passport.initialize());
-app.use(passport.session());
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
