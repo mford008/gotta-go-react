@@ -38,7 +38,12 @@ UserSchema.pre('save', function (next) {
 });
 
 UserSchema.pre('update', function (next) {
-  this.local.password = this.hashPassword(this.local.password);
+  if (!this.local.password) {
+    console.log('no password');
+    next();
+  } else {
+    this.local.password = this.hashPassword(this.local.password);
+  }
 });
 
 const User = mongoose.model('User', UserSchema);
