@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Btn, InputField, Form } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
 import Header from '../../components/Header/Header.js';
-import API from '../../utils/API'
+import API from '../../utils/API';
 
 class UpdateProfile extends Component {
   state = {
@@ -61,7 +61,7 @@ class UpdateProfile extends Component {
             name='newPassword'
 
             />
-          <Btn onClick={this.handleFormSubmit} > Update </Btn>
+          <Btn onClick={this.handleFormSubmit} >Update</Btn>
         </Form>
       </div>
     );

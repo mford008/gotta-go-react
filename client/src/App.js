@@ -19,13 +19,13 @@ const middleware = [logger, thunk];
 const store = createStore(
   rootReducer,
   {},
-  composeWithDevTools(applyMiddleware(...middleware)),
+  composeWithDevTools(applyMiddleware(...middleware))
 );
 
 const App = () => {
   const style = {
     width: '100%',
-    height: '100%',
+    height: '100%'
   };
 
   return (
