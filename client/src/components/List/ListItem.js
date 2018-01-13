@@ -56,7 +56,6 @@ class ListItem extends Component {
         <CommentButton
           onClick={this.handleCommentToggle}
           value={this.props.id}>
-          Comments
         </CommentButton>
         <br />
         <CommentContainer isHidden={this.state.isHidden}>

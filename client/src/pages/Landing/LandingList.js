@@ -21,7 +21,6 @@ export class LandingList extends Component {
     return link;
   }
 
-
   render () {
     return (
       <div>
