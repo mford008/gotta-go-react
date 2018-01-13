@@ -69,13 +69,13 @@ class Signup extends Component {
             onChange={this.handleChange}
             name='passConfirm'
           />
-          <Btn
-            onClick={this.handleFormSubmit}
-            >
+          <Btn onClick={this.handleFormSubmit}>
               Sign up
-            </Btn>
+          </Btn>
         </Form>
-        <h3>{this.state.error}</h3>
+        <div className="has-text-centered">
+          <h4>{this.state.error}</h4>
+        </div>
         <div className="has-text-centered">
           <Link to='/login'>
             Already a Member? Login

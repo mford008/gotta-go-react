@@ -3,7 +3,7 @@ import '../Login/Login.css';
 import API from '../../utils/API';
 import Map from '../../components/Map/Map';
 import MapContainer from '../../components/Map/MapContainer';
-import { Marker, Icon } from 'react-google-maps';
+import { Marker } from 'react-google-maps';
 
 class LandingMap extends Component {
   state = {

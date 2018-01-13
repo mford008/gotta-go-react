@@ -65,7 +65,9 @@ class Login extends Component {
           >
             Log in
           </Btn>
-          <h4>{this.state.error}</h4>
+          <div className="has-text-centered">
+            <h4>{this.state.error}</h4>
+          </div>
           <div className="has-text-centered">
             <Link to='/signup'>
               Not yet a member? Signup!
