@@ -12,7 +12,9 @@ class AddLoo extends Component {
     category: 'Gas Station',
     comment: '',
     lat: 0,
-    lng: 0
+    lng: 0,
+    checkHidden: false,
+    addHidden: true
   };
 
   handleChange = event => {
@@ -24,11 +26,6 @@ class AddLoo extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    geocodeByAddress(this.state.address)
-      .then(results => getLatLng(results[0]))
-      .then(latLng => console.log('Success', latLng))
-      .then(this.setState({name: '', location: '', category: '', comment: ''}))
-      .catch(error => console.error('Error', error))
 
     geocodeByAddress(this.state.location)
       .then(results => getLatLng(results[0]))
@@ -36,15 +33,21 @@ class AddLoo extends Component {
         lat: latLng.lat,
         lng: latLng.lng
       }))
-      .then(this.sendNewLoo())
       .catch(error => console.error('Error', error))
+
+    setTimeout(this.toggleHidden(), 750)
+  }
+
+  toggleHidden = () => {
+    this.setState({
+      checkHidden: true,
+      addHidden: false
+    })
   }
 
   sendNewLoo = () => {
     API.addLoo(this.state)
-    .then(res => {
-      this.props.history.push('/landing/list')
-      console.log({ results: res.data })})
+    .then(res => this.props.history.push('/landing/list'))
     .catch(err => console.log(err))
   }
 
@@ -84,7 +87,8 @@ class AddLoo extends Component {
             label='Comment (optional)'
             onChange={this.handleChange}
           />
-          <Btn onClick={this.handleFormSubmit}> Add Restroom </Btn>
+          <Btn onClick={this.handleFormSubmit} isHidden={this.state.checkHidden}>Check location</Btn>
+          <Btn onClick={this.sendNewLoo} isHidden={this.state.addHidden}> Add Restroom </Btn>
         </Form>
       </div>
     );
