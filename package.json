@@ -4,6 +4,7 @@
   "main": "index.js",
   "repository": "https://github.com/mford008/gotta-go-react.git",
   "author": "Maddy Ford <mrhf008@gmail.com>",
+  "homepage": "https://gotta-go.herokuapp.com/",
   "scripts": {
     "server": "node server.js",
     "client": "node scripts/start-client.js",
