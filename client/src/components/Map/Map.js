@@ -15,7 +15,7 @@ const Map = compose(
   return (
     <GoogleMap
       defaultZoom={12}
-      defaultCenter={{ lat: props.lat, lng: props.lng }}
+      defaultCenter={{ lat: localStorage.getItem('lat'), lng: localStorage.getItem('lng') }}
     >
       <Marker
         label='Y'
@@ -34,6 +34,7 @@ function mapStateToProps(dispatch) {
 }
 
 export default connect(state => {
+  console.log('=================')
   console.log(state.position)
   return {
     lat: state.position.latitude,
