@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../Login/Login.css';
 import API from '../../utils/API';
 import { ListContainer } from "../../components/List";
-import ListItem from '../../components/List/ListItem.js'
+import ListItem from '../../components/List/ListItem.js';
 
 export class LandingList extends Component {
   state = {

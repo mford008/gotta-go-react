@@ -3,4 +3,5 @@ export * from './ListItem';
 export * from './CommentContainer';
 export * from './CommentItem';
 export * from './CommentButton';
+export * from './AddCommentBtn';
 export * from './CommentList';

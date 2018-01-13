@@ -8,7 +8,7 @@ import LandingList from './LandingList.js';
 
 class Landing extends Component {
   state = {
-
+    
   }
 
   componentDidMount() {
@@ -25,7 +25,6 @@ class Landing extends Component {
   }
 
   render () {
-
     return (
       <div>
         <Header />

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { ListContainer,  CommentContainer, CommentButton , CommentItem} from "../../components/List";
-import { Btn, Comment } from '../../components/Form';
+import { Comment } from '../../components/Form';
+import { AddCommentBtn } from '../../components/List';
 import API from '../../utils/API';
 
 class ListItem extends Component {
@@ -28,6 +29,9 @@ class ListItem extends Component {
     API.newComment(this.state.currID, this.state.comment)
     .then(res => console.log({ results: res.data }))
     .catch(err => console.log(err))
+
+    this.setState({ comment: ''})
+    window.location.reload()
   }
 
 
@@ -67,7 +71,7 @@ class ListItem extends Component {
             name='comment'
             onChange={this.handleChange}
            />
-          <Btn onClick={this.handleCommentSubmit}> Add Comment </Btn>
+          <AddCommentBtn onClick={this.handleCommentSubmit}> Add Comment </AddCommentBtn>
         </CommentContainer>
       </li>
     )

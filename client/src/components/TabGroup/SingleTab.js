@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { TabLink, Tab, Icon, span } from 'bloomer';
+import { Tab, Icon, span } from 'bloomer';
 
 export const SingleTab = props =>
   <Tab>
