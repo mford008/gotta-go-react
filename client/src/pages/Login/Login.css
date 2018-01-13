@@ -57,11 +57,27 @@ div.navbar-dropdown .navbar-item {
 
 .tabs li {
   background-color: #eeeeee;
-  border: 1px solid #dbdbdb;
+  /* border: 1px solid #dbdbdb; */
+}
+
+div.tabs.is-boxed a:hover {
+    background-color: #ffffff;
 }
 
 .tabs.is-boxed.is-fullwidth {
 	margin: 0;
+}
+
+.comment-group-item {
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  margin-bottom: 2px;
+  background-color: #eeeeee;
+}
+
+.comment-group-item h4 {
+  padding-left: 10px;
+  font-size: 16px;
 }
 
 .input {
@@ -130,8 +146,12 @@ label.label {
   font-family: 'Raleway', sans-serif;
 }
 
+.textarea:not([rows]) {
+  min-height: 80px;
+}
+
 div ul li.list-group-item.tile {
-  padding: 0 10px 0 20px;
+  padding: 0 10px 15px 20px;
   border: none;
   border-bottom: 1px solid #eeeeee;
   box-shadow: 0 1px 1px;

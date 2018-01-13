@@ -15,7 +15,7 @@ const Map = compose(
   return (
     <GoogleMap
       defaultZoom={12}
-      defaultCenter={{ lat: localStorage.getItem('lat'), lng: localStorage.getItem('lng') }}
+      defaultCenter={{ lat: props.lat, lng: props.lng }}
     >
       <Marker
         label='Y'

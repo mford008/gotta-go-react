@@ -12,5 +12,6 @@ export const CommentButton = props =>
       width: '35px',
       height: '35px',
       padding: '0',
+      margin: '0',
     }}/>
   </div>;
