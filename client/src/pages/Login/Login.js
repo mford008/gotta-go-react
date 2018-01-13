@@ -4,7 +4,7 @@ import { Btn, InputField, Form } from '../../components/Form';
 import Header from '../../components/Header/Header.js';
 import { Title } from '../../components/Title/Title.js';
 import './Login.css';
-import API from '../../utils/API'
+import API from '../../utils/API';
 
 class Login extends Component {
   state = {
@@ -61,8 +61,7 @@ class Login extends Component {
             name='password'
            />
           <Btn
-            onClick={this.checkUser}
-          >
+            onClick={this.checkUser}>
             Log in
           </Btn>
           <div className="has-text-centered">

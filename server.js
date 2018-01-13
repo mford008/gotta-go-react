@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const morgan = require('morgan');
-const session = require('express-session');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -12,14 +11,6 @@ const PORT = process.env.PORT || 3001;
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(
-session({
-  secret: process.env.APP_SECRET || 'this is the default passphrase',
-  // store: new MongoStore({ mongooseConnection: dbConnection }),
-  resave: false,
-  saveUninitialized: false
-})
-);
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {

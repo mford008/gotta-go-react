@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Btn, InputField, Form } from '../../components/Form';
 import { Title } from '../../components/Title/Title.js';
 import Header from '../../components/Header/Header.js';
-import API from '../../utils/API'
+import API from '../../utils/API';
 
 class Signup extends Component {
   state = {

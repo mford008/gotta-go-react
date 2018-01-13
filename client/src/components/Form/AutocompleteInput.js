@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PlacesAutocomplete from 'react-places-autocomplete';
 import { Field, Label, Control } from 'bloomer';
 
@@ -18,7 +18,6 @@ export class AutocompleteInput extends Component {
     const inputProps = {
       value: this.state.address,
       onChange: this.onChangeFn,
-      // placeholder: {this.props.placeholder}
     };
 
     const cssClasses = {

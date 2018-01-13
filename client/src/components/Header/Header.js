@@ -20,6 +20,7 @@ export class Header extends Component {
   render () {
     return (
       <Navbar style={{backgroundColor: '#393f60'}}>
+
         <NavbarBrand style={{ justifyContent: 'space-between' }}>
           <Plus />
           <NavbarItem>
@@ -29,9 +30,9 @@ export class Header extends Component {
             <NavbarBurger onClick={this.onClickBurger} style={{ color: '#ffffff' }}></NavbarBurger>
           </NavbarItem>
         </NavbarBrand>
+
         <NavbarMenu isHidden={this.state.isHidden}>
           <MenuItem href='/landing/list'>Nearby</MenuItem>
-          {/* <MenuItem href='/addloo'>Add Loo</MenuItem> */}
           <MenuItem href='/account'>Account</MenuItem>
           <MenuItem href='/login'>Log in</MenuItem>
         </NavbarMenu>
