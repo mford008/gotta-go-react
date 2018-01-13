@@ -1,4 +1,4 @@
-export * from './Button';
+export * from './Btn';
 export * from './InputField';
 export * from './Comment';
 export * from './Category';

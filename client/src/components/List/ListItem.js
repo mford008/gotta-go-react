@@ -15,8 +15,6 @@ class ListItem extends Component {
 
   handleCommentToggle = event => {
     event.preventDefault();
-    console.log(event.target);
-    console.log(event.target.value);
     this.setState({currID: event.target.value});
     if (this.state.isHidden) {
       this.setState({isHidden: false})
@@ -27,7 +25,6 @@ class ListItem extends Component {
 
   handleCommentSubmit = event => {
     event.preventDefault();
-    console.log(this.state.currID)
     API.newComment(this.state.currID, this.state.comment)
     .then(res => console.log({ results: res.data }))
     .catch(err => console.log(err))
@@ -42,8 +39,6 @@ class ListItem extends Component {
   }
 
   render(){
-    console.log(this.state);
-    console.log(this.props.id);
     return (
       <li className="list-group-item tile" key={this.props.id}>
         <h1><strong>{this.props.locationName}</strong></h1>
@@ -56,7 +51,6 @@ class ListItem extends Component {
         <CommentButton
           onClick={this.handleCommentToggle}
           value={this.props.id}>
-          Comments
         </CommentButton>
         <br />
         <CommentContainer isHidden={this.state.isHidden}>
