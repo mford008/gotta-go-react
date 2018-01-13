@@ -31,9 +31,8 @@ export class Header extends Component {
         </NavbarBrand>
         <NavbarMenu isHidden={this.state.isHidden}>
           <MenuItem href='/landing/list'>Nearby</MenuItem>
-          {/* <MenuItem href='/addloo'>Add Loo</MenuItem> */}
           <MenuItem href='/account'>Account</MenuItem>
-          <MenuItem href='/login'>Log in</MenuItem>
+          {/* <MenuItem href='/login'>Log in</MenuItem> */}
         </NavbarMenu>
       </Navbar>
     )
