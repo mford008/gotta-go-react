@@ -22,6 +22,6 @@ export default {
   },
   changePassword: function (newPassword) {
     console.log('password to change', newPassword);
-    return axios.post('/auth/user/account', newPassword);
+    return axios.put('/auth/user/account', newPassword);
   }
 };
