@@ -37,6 +37,10 @@ UserSchema.pre('save', function (next) {
   }
 });
 
+UserSchema.pre('update', function (next) {
+  this.local.password = this.hashPassword(this.local.password);
+});
+
 const User = mongoose.model('User', UserSchema);
 
 module.exports = User;

@@ -62,23 +62,23 @@ module.exports = {
           return res.send({user: 'wrong password'});
         } else {
           console.log('match!!!');
-          userMatch.password = newpass;
-          userMatch.save();
-          console.log('password updated');
-          return res.send({user: 'password changed'});
-          // db.User.update(
-          //   {'password': pass},
-          //   {$set: {'password': userMatch.hashPassword(newpass)}},
-          //   (err, callback) => {
-          //     if (err) {
-          //       console.log(err);
-          //       return err;
-          //     } else {
-          //       console.log('password updated');
-          //       return res.send({user: 'password changed'});
-          //     }
-          //   }
-          // );
+          // userMatch.password = newpass;
+          // userMatch.update();
+          // console.log('password updated');
+          // return res.send({user: 'password changed'});
+          db.User.update(
+            {'password': pass},
+            {$set: {'password': newpass}},
+            (err, callback) => {
+              if (err) {
+                console.log(err);
+                return err;
+              } else {
+                console.log('password updated');
+                return res.send({user: 'password changed'});
+              }
+            }
+          );
         }
       });
     };
