@@ -29,7 +29,7 @@ UserSchema.methods = {
 
 UserSchema.pre('save', function (next) {
   if (!this.local.password) {
-    console.log("you shall not poop!!");
+    console.log('you shall not poop!!');
     next();
   } else {
     this.local.password = this.hashPassword(this.local.password);
