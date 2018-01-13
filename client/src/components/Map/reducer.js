@@ -15,11 +15,11 @@ export default function (state = initialState, action) {
     case 'GET_AUTO_INPUT':
       return {
         ...state,
-        autocompleteInput: data,
+        autocompleteInput: data
       };
     case 'RESET':
       return {
-        initialState,
+        initialState
       };
     default:
       return state;

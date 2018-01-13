@@ -29,6 +29,9 @@ class ListItem extends Component {
     API.newComment(this.state.currID, this.state.comment)
     .then(res => console.log({ results: res.data }))
     .catch(err => console.log(err))
+
+    this.setState({ comment: ''})
+    window.location.reload()
   }
 
 

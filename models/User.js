@@ -27,7 +27,7 @@ UserSchema.methods = {
   }
 };
 
-UserSchema.pre('save', function (next) {
+UserSchema.pre('save', 'update', function (next) {
   if (!this.local.password) {
     console.log('you shall not poop!!');
     next();

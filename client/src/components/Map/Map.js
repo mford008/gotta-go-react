@@ -24,18 +24,18 @@ const Map = compose(
       {props.children}
     </GoogleMap>
   );
-  }
+}
 );
 
-function mapStateToProps(dispatch) {
-   return bindActionCreators({
+function mapStateToProps (dispatch) {
+  return bindActionCreators({
 
-   }, dispatch);
+  }, dispatch);
 }
 
 export default connect(state => {
-  console.log('=================')
-  console.log(state.position)
+  console.log('=================');
+  console.log(state.position);
   return {
     lat: state.position.latitude,
     lng: state.position.longitude

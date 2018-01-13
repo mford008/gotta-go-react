@@ -30,7 +30,7 @@ class Start extends Component {
           <div ref='main' style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
             <div className='has-text-centered logo'>
               <img style={{ margin: '50px', height: '120px', width: 'auto' }}
-                className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
+               className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
             </div>
             <div className='intro has-text-centered'>
               <p>
@@ -58,7 +58,7 @@ class Start extends Component {
         <div ref='main' style={{ width: '100%', height: '100%', backgroundColor: '#393f60' }}>
           <div className='has-text-centered logo'>
             <img style={{ margin: '50px', height: '120px', width: 'auto' }}
-              className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
+             className='start-logo' src='../transp-gotta-go.png' alt='Gotta Go' />
           </div>
           <div className='intro has-text-centered'>
             {/* <p>

@@ -11,10 +11,6 @@ html, body {
 	width: 100%;
 }
 
-/*.navbar-burger.burger {
- 	font-family: 'Raleway', sans-serif;
-}*/
-
 .columns {
   margin: 0;
 }
@@ -101,7 +97,6 @@ nav.level.is-mobile {
 
 a.button {
   font-family: 'Raleway', sans-serif;
-  /*margin-top: 10px;*/
   padding: 10px 50px;
   background-color: #393f60;
   color: #ffffff;
@@ -110,7 +105,6 @@ a.button {
 
 button.button {
   font-family: 'Raleway', sans-serif;
-  /*margin-top: 10px;*/
   padding: 5px 50px;
   background-color: #393f60;
   color: #ffffff;
