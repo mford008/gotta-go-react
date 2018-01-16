@@ -1,7 +1,7 @@
 # Gotta Go 2.0
 ## The React Application
 
-![GottaGo React components structure](https://github.com/mford008/gotta-go-react/blob/master/client/public/GG2-IX-flow-components.pdf)
+[GottaGo React components structure](https://github.com/mford008/gotta-go-react/blob/master/client/public/GG2-IX-flow-components.pdf)
 
 This application is a React-based mobile web application. Its purpose is to crowdsource local restrooms for frequent drivers and busy people on the go. Users can see local restrooms, signed in members can add comments and new restrooms they find.
 
