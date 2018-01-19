@@ -9,5 +9,5 @@ This application is a React-based mobile web application. Its purpose is to crow
 
 This application was built using React and MongoDB/mLab, as well as Node.js and Express. The front end was constructed using Redux, Bulma, HTML/JSX/CSS, and Bloomer, a library of stateless React components. It utilizes API calls to the MongoDB/mLab database to post and retrieve restrooms and comments. Redux is used for loading the Google Map according to the user's location. By making calls to the Google Maps API, users can also get directions to their restroom of choice. The application is still in development.
 
-<a href="https://g.recordit.co/LrUsYhT8rE"><img src="https://g.recordit.co/LrUsYhT8rE.gif"></a>
+<a href="http://g.recordit.co/LrUsYhT8rE"><img src="http://g.recordit.co/LrUsYhT8rE.gif"></a>
 
