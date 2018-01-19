@@ -11,4 +11,4 @@ This application was built using React and MongoDB/mLab, as well as Node.js and 
 
 http://g.recordit.co/LrUsYhT8rE.gif
 
-![recording]('./client/public/gotta-go-recording.gif "recording")
+![recording]('gotta-go-recording.gif' "recording")
