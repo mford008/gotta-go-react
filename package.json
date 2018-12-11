@@ -17,8 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "bcrypt": "^1.0.3",
-    "bcryptjs": "^2.4.3",
+    "bcrypt-nodejs": "0.0.3",
     "bloomer": "^0.6.3",
     "body-parser": "^1.18.2",
     "bulma": "^0.6.1",
@@ -28,6 +27,7 @@
     "mongoose": "^4.13.6",
     "morgan": "^1.9.0",
     "node": "^11.4.0",
+    "node-gyp": "^3.8.0",
     "react": "^16.6.3",
     "react-google-maps": "^9.4.4",
     "react-places-autocomplete": "^5.4.3",
