@@ -13,7 +13,8 @@
     "react-dom": "^16.2.0",
     "react-google-maps": "^9.4.4",
     "react-redux": "^5.0.6",
-    "react-scripts": "^2.1.1"
+    "react-scripts": "^2.1.1",
+    "request": "^2.88.0"
   },
   "scripts": {
     "start": "react-scripts start",
