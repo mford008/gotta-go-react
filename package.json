@@ -13,7 +13,7 @@
     "seed": "node scripts/seedDB.js"
   },
   "engines": {
-    "node": "^11.4.0",
+    "node": "^11.4.0"
   },
   "dependencies": {
     "axios": "^0.17.1",
