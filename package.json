@@ -16,15 +16,15 @@
     "node": "^11.4.0"
   },
   "dependencies": {
-    "axios": "^0.17.1",
+    "axios": ">=0.18.1",
     "bcrypt-nodejs": "0.0.3",
     "bloomer": "^0.6.3",
     "body-parser": "^1.18.2",
     "bulma": "^0.6.1",
-    "connect-mongo": "^2.0.1",
+    "connect-mongo": "^3.2.0",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
-    "mongoose": "^4.13.6",
+    "mongoose": ">=5.7.5",
     "morgan": "^1.9.0",
     "node": "^11.4.0",
     "node-gyp": "^3.8.0",
